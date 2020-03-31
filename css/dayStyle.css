@@ -56,34 +56,57 @@
   background-color: lightskyblue;
   margin: 0 auto;
   position: relative;
-  display: block;
-}
-
-.container .sub_container .header .logo {
-  margin-top: 2.1%;
-  left: 47.6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .sub_container .header .btn_createGifo, .container .sub_container .header .btn_chooseThem {
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
+.container .sub_container .header .btn_headers {
+  display: inline;
+  border: red solid;
+  position: absolute;
+  margin-top: 2.7%;
+  width: 50%;
+  right: 0;
 }
 
-.container .sub_container .header .btn_createGifo {
+.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow {
+  background-color: #F7C9F3;
+  display: left;
+  color: black;
+}
+
+.container .sub_container .header .btn_headers .btn_downArrow {
+  width: 36px;
+  height: 36px;
+}
+
+.container .sub_container .header .btn_headers .btn_createGifo {
   position: absolute;
   width: 144px;
   height: 36px;
 }
 
-.container .sub_container .header .btn_chooseThem {
+.container .sub_container .header .btn_headers .btn_chooseThem {
   width: 131px;
   height: 36px;
+}
+
+.container .sub_container .header .btn_headers .btn_misGifos {
+  color: black;
+  width: 76px;
+  height: 18px;
+  background-color: transparent;
+  margin-top: 3.2%;
+}
+
+.container .sub_container .header .frameLogo {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 2.1%;
+  /*left: 47.6%;*/
+  /*display: left;*/
+  margin-right: 47.6%;
 }
 
 .container .sub_container .searchs {
@@ -126,6 +149,10 @@
   width: 100px;
   height: 100px;
   background-color: black;
+  background-image: url("/assets/loading-gif-transparent.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   margin: 1.3% auto;
 }
 
@@ -151,6 +178,10 @@
   width: 100px;
   height: 100px;
   background-color: black;
+  background-image: url("/assets/loading-gif-transparent.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,6 +204,10 @@
   width: 100px;
   height: 100px;
   background-color: black;
+  background-image: url("/assets/loading-gif-transparent.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
