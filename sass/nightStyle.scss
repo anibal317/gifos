@@ -21,14 +21,14 @@ $familyType: 'Chakra Petch';
     padding: 0;
     border: 0;
     color: $text_color;
-    background-image: $day_general_background;
+    
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    font-family: $familyType;
+    font-family: $familyType
 }
 .container{
-    /*background-color: gray;*/
+    background-color: pink;
     width: 100.6%;
     height: auto;
     
