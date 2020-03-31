@@ -11,7 +11,7 @@ $text_color: white;
 $day_general_background: #FFF4FD;
 $night_general_background: #110038;
 $backgroudColor_btn:#F7C9F3;
-
+$familyType: 'Chakra Petch';
 
 
 /*General Styles*/
@@ -25,6 +25,7 @@ $backgroudColor_btn:#F7C9F3;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    font-family: $familyType;
 }
 .container{
     background-color: gray;
@@ -41,7 +42,6 @@ $backgroudColor_btn:#F7C9F3;
         p{
             display: table-cell;
             vertical-align: middle;    
-            font-family: 'Chakra Petch';
             font-size: 12px;
             color: #FFFFFF; 
             letter-spacing: 0;
@@ -53,7 +53,6 @@ $backgroudColor_btn:#F7C9F3;
         width: 90%;
         height: auto;
         margin: 0 auto;
-        
         .header{
             width: 100%;
             height: 100px;
@@ -61,46 +60,50 @@ $backgroudColor_btn:#F7C9F3;
             margin: 0 auto;
             position: relative;
             display: flex;
-
             .btn_headers{
-                display: inline;
-                border: red solid;
                 position: absolute;
                 margin-top: 2.7%;
-                width: 50%;
-                right: 0;
-                .btn_createGifo, .btn_chooseThem, .btn_misGifos, .btn_downArrow{
+                width: auto;
+                left: 800px;
+                .btn_createGifo, .btn_chooseThem, .btn_misGifos, .btn_downArrow, .btn_misGifos{
                     background-color: $backgroudColor_btn;
                     display: left;
                     color: black;
-                }
-                .btn_downArrow{
-                    width: 36px;
+                    border: 1px solid #110038;
                     height: 36px;
+                    line-height: 18px;
+                    letter-spacing: 0;
+                    text-align: center;
+                    font-size: 16px;
                 }
                 .btn_createGifo{
                     position: absolute;
                     width: 144px;
-                    height: 36px;
+                    left: 0;
                 }
                 .btn_chooseThem{
+                    position: absolute;
                     width: 131px;
-                    height: 36px;
+                    left: 160px;
+                }
+                .btn_downArrow{
+                    width: 36px;                    
+                    position: absolute;
+                    left: 291px;
                 }
                 .btn_misGifos{
-                    color: black;
-                    width: 76px;
-                    height: 18px;
+                    position: absolute;
                     background-color: transparent;
                     margin-top: 3.2%;
+                    left: 335px;
+                    border: none;
+                    width: 76px;
                 }
             }
             .frameLogo{
                 margin-right: 0;
                 margin-left: 0;
                 margin-top: 2.1%;
-                /*left: 47.6%;*/
-                /*display: left;*/
                 margin-right: 47.6%;
             }
         }

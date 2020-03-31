@@ -14,6 +14,7 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  font-family: "Chakra Petch";
 }
 
 .container {
@@ -36,7 +37,6 @@
 .container .box_title p {
   display: table-cell;
   vertical-align: middle;
-  font-family: 'Chakra Petch';
   font-size: 12px;
   color: #FFFFFF;
   letter-spacing: 0;
@@ -62,50 +62,55 @@
 }
 
 .container .sub_container .header .btn_headers {
-  display: inline;
-  border: red solid;
   position: absolute;
   margin-top: 2.7%;
-  width: 50%;
-  right: 0;
+  width: auto;
+  left: 800px;
 }
 
-.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow {
+.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow, .container .sub_container .header .btn_headers .btn_misGifos {
   background-color: #F7C9F3;
   display: left;
   color: black;
-}
-
-.container .sub_container .header .btn_headers .btn_downArrow {
-  width: 36px;
+  border: 1px solid #110038;
   height: 36px;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  font-size: 16px;
 }
 
 .container .sub_container .header .btn_headers .btn_createGifo {
   position: absolute;
   width: 144px;
-  height: 36px;
+  left: 0;
 }
 
 .container .sub_container .header .btn_headers .btn_chooseThem {
+  position: absolute;
   width: 131px;
-  height: 36px;
+  left: 160px;
+}
+
+.container .sub_container .header .btn_headers .btn_downArrow {
+  width: 36px;
+  position: absolute;
+  left: 291px;
 }
 
 .container .sub_container .header .btn_headers .btn_misGifos {
-  color: black;
-  width: 76px;
-  height: 18px;
+  position: absolute;
   background-color: transparent;
   margin-top: 3.2%;
+  left: 335px;
+  border: none;
+  width: 76px;
 }
 
 .container .sub_container .header .frameLogo {
   margin-right: 0;
   margin-left: 0;
   margin-top: 2.1%;
-  /*left: 47.6%;*/
-  /*display: left;*/
   margin-right: 47.6%;
 }
 
