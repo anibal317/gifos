@@ -61,9 +61,9 @@ $familyType: 'Chakra Petch';
             .btn_headers{
                 position: absolute;
                 margin-top: 2.7%;
-                width: auto;
-                left: 800px;
-                .btn_createGifo, .btn_chooseThem, .btn_misGifos, .btn_downArrow, .btn_misGifos{
+                /*width: 700px;*/
+                left: 700px;
+                .btn_createGifo, .btn_chooseThem, .btn_misGifos, .btn_downArrow, .btn_misGifos, .dropdown-content{
                     background-color: $backgroudColor_btn;
                     display: left;
                     color: black;
@@ -74,26 +74,46 @@ $familyType: 'Chakra Petch';
                     text-align: center;
                     font-size: 16px;
                 }
+                .dropdown{
+                    position: absolute;
+                    left: 260px;
+                    width: 165px;
+                    
+                   .btn_chooseThem{
+                        position: absolute;
+                        width: 131px;
+                        right: 34px;
+                    }
+                    .btn_downArrow{
+                        width: 36px;                    
+                        position: absolute;
+                        left: 130px;
+                    }
+
+                    .dropdown-content{
+                        margin-top: 35px;
+                        background-color: #E6E6E6;
+                        
+                        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0; 
+                        height: 102px;
+                        .dropdown-content a{
+                            height: 100px;
+                            color: #110038;
+                            letter-spacing: 0;
+                            line-height: 22px;
+                        }
+                    }
+                }
                 .btn_createGifo{
                     position: absolute;
                     width: 144px;
-                    left: 0;
-                }
-                .btn_chooseThem{
-                    position: absolute;
-                    width: 131px;
-                    left: 160px;
-                }
-                .btn_downArrow{
-                    width: 36px;                    
-                    position: absolute;
-                    left: 291px;
+                    left: 100px;
                 }
                 .btn_misGifos{
                     position: absolute;
                     background-color: transparent;
                     margin-top: 3.2%;
-                    left: 335px;
+                    left: 435px;
                     border: none;
                     width: 76px;
                 }

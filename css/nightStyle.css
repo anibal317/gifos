@@ -61,11 +61,11 @@
 .container .sub_container .header .btn_headers {
   position: absolute;
   margin-top: 2.7%;
-  width: auto;
-  left: 800px;
+  /*width: 700px;*/
+  left: 700px;
 }
 
-.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow, .container .sub_container .header .btn_headers .btn_misGifos {
+.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .dropdown-content {
   background-color: #F7C9F3;
   display: left;
   color: black;
@@ -77,29 +77,50 @@
   font-size: 16px;
 }
 
+.container .sub_container .header .btn_headers .dropdown {
+  position: absolute;
+  left: 260px;
+  width: 165px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_chooseThem {
+  position: absolute;
+  width: 131px;
+  right: 34px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_downArrow {
+  width: 36px;
+  position: absolute;
+  left: 130px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content {
+  margin-top: 35px;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+  height: 102px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .dropdown-content a {
+  height: 100px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
 .container .sub_container .header .btn_headers .btn_createGifo {
   position: absolute;
   width: 144px;
-  left: 0;
-}
-
-.container .sub_container .header .btn_headers .btn_chooseThem {
-  position: absolute;
-  width: 131px;
-  left: 160px;
-}
-
-.container .sub_container .header .btn_headers .btn_downArrow {
-  width: 36px;
-  position: absolute;
-  left: 291px;
+  left: 100px;
 }
 
 .container .sub_container .header .btn_headers .btn_misGifos {
   position: absolute;
   background-color: transparent;
   margin-top: 3.2%;
-  left: 335px;
+  left: 435px;
   border: none;
   width: 76px;
 }

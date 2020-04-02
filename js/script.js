@@ -1,8 +1,13 @@
 let cssInUse=document.getElementById('lnkStyleSheet');
-let btnChooseThem=document.getElementById('btn_chooseThem');
+let btnThemDay=document.getElementById('themDay');
+let btnThemNight=document.getElementById('themNight');
 
-btnChooseThem.addEventListener('click', chooseThem);
+btnThemDay.addEventListener('click', chooseThemDay);
+btnThemNight.addEventListener('click', chooseThemNight);
 
-function chooseThem(){
-    console.log(cssInUse.classList.toggle.name.toString);
+function chooseThemDay(){
+    cssInUse.href='css/dayStyle.css';
+}
+function chooseThemNight(){
+    cssInUse.href='css/nightStyle.css';
 }

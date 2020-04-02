@@ -14,17 +14,24 @@
             <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
         </div>
         <div class="sub_container">
-            <div class="header">
+            <nav class="header">
                 <div class="frameLogo">
                     <img src="assets/gifOF_logo.png" alt="gif.os_Logo" class="logo">
                 </div>
                 <div class="btn_headers">
-                    <button class="btn_createGifo">Crear Guifos</button>
-                    <button class="btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
-                    <button class="btn_downArrow"><img src="./assets/dropdown.svg" alt=""></button>
+                    <button class="btn_createGifo">Crear Guifos</button>                    
+                    <div class="dropdown">
+                        <button class="btn_pos btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
+                        <button class="btn_pos btn_downArrow"><img src="./assets/dropdown.svg" alt=""></button>
+                        <div class="dropdown-content">
+                            <a href="#" class="linkThem" id="themDay">Saylor Day</a>
+                            <a href="#" class="linkThem" id="themNight">Saylor Night</a>
+                        </div>
+                    </div>
                     <button class="btn_misGifos"> <span style="text-decoration: underline; color: black;">M</span>is Guifos</button>
                 </div>
-            </div>
+                
+            </nav>
             <div class="searchs">
                 <div class="search_title"></div>
                 <div class="search">
