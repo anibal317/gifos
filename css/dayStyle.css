@@ -1,6 +1,7 @@
 /*Imports*/
 /**/
 @import url("https://fonts.googleapis.com/css?family=Chakra+Petch:400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /*Variables*/
 /*General Styles*/
 * {
@@ -9,7 +10,6 @@
   padding: 0;
   border: 0;
   color: white;
-  background-image: #FFF4FD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
@@ -17,8 +17,11 @@
   font-family: "Chakra Petch";
 }
 
+body {
+  background-color: #FFF4FD;
+}
+
 .container {
-  /*background-color: gray;*/
   width: 100.6%;
   height: auto;
 }
@@ -82,6 +85,7 @@
   position: absolute;
   left: 260px;
   width: 165px;
+  z-index: 3;
 }
 
 .container .sub_container .header .btn_headers .dropdown .btn_chooseThem {
@@ -99,7 +103,7 @@
 .container .sub_container .header .btn_headers .dropdown .dropdown-content {
   margin-top: 35px;
   background-color: #E6E6E6;
-  display: block;
+  display: none;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
   height: 102px;
@@ -166,33 +170,82 @@
 }
 
 .container .sub_container .searchs {
-  width: 100%;
+  position: relative;
+  width: auto;
   height: 99px;
-  background-color: magenta;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  margin-bottom: 3.9%;
 }
 
 .container .sub_container .searchs .search_title {
-  width: 100%;
-  height: 20px;
-  background-color: red;
+  position: absolute;
+  margin-left: 0.2%;
+  margin-top: 0.2%;
+  width: 99.6%;
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 0.4%;
+  padding-top: 0.2%;
+}
+
+.container .sub_container .searchs .search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 57px;
+  height: 23px;
 }
 
 .container .sub_container .searchs .search .in_search {
+  position: absolute;
   width: 100%;
+  margin-left: 1%;
+}
+
+.container .sub_container .searchs .search .txtSearch {
+  position: absolute;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  width: 1075px;
   height: 48px;
-  background-color: chartreuse;
+  color: black;
+  margin-top: 3.1%;
+  padding-left: 1.1%;
+  margin-left: 1%;
 }
 
 .container .sub_container .searchs .search .btn_search {
-  width: 100%;
+  position: absolute;
+  width: 102px;
   height: 36px;
-  background-color: cyan;
+  right: 1.3%;
+  margin-top: 3.7%;
+  background: #E6E6E6;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #B4B4B4;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.container .sub_container .searchs .search .btn_search .search-icon {
+  margin-right: 5.7%;
+  color: #B4B4B4;
 }
 
 .container .sub_container .suggestions .daily_suggest {
   width: 100%;
   height: 32px;
-  background-color: grey;
+  background-color: blue;
 }
 
 .container .sub_container .suggestions .img_suggest {
@@ -245,19 +298,19 @@
   margin: 1.3% auto;
 }
 
-.container .sub_container .body {
+.container .sub_container .tetra {
   width: 100%;
   height: auto;
   background-color: midnightblue;
 }
 
-.container .sub_container .body .gifs {
+.container .sub_container .tetra .gifs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .sub_container .body .gifs .img_body1, .container .sub_container .body .gifs .img_body2, .container .sub_container .body .gifs .img_body3, .container .sub_container .body .gifs .img_body4 {
+.container .sub_container .tetra .gifs .img_body1, .container .sub_container .tetra .gifs .img_body2, .container .sub_container .tetra .gifs .img_body3, .container .sub_container .tetra .gifs .img_body4 {
   width: 100px;
   height: 100px;
   background-color: black;

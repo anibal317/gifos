@@ -3,6 +3,7 @@
     //#FFF4FD - Day
 /**/
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:400,500,600,700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /*Variables*/
 $urlLoadingImg: url("/assets/loading-gif-transparent.gif");
@@ -14,6 +15,7 @@ $backgroudColor_btn:#F7C9F3;
 $familyType: 'Chakra Petch';
 
 
+
 /*General Styles*/
 *{
     margin-left: 0px;
@@ -21,17 +23,17 @@ $familyType: 'Chakra Petch';
     padding: 0;
     border: 0;
     color: $text_color;
-    background-image: $day_general_background;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
     font-family: $familyType;
 }
+body{
+    background-color: $day_general_background;
+}
 .container{
-    /*background-color: gray;*/
     width: 100.6%;
     height: auto;
-    
     .box_title{
         width: 100%;
         height: 23px;
@@ -78,7 +80,7 @@ $familyType: 'Chakra Petch';
                     position: absolute;
                     left: 260px;
                     width: 165px;
-                    
+                    z-index: 3;
                    .btn_chooseThem{
                         position: absolute;
                         width: 131px;
@@ -89,14 +91,12 @@ $familyType: 'Chakra Petch';
                         position: absolute;
                         left: 130px;
                     }
-                    
                     .dropdown-content{
                         margin-top: 35px;
                         background-color: #E6E6E6;
-                        display: block;
+                        display: none;
                         box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0; 
                         height: 102px;
-                        
                         .linkThem{
                             height: 36px;
                             letter-spacing: 0;
@@ -149,24 +149,62 @@ $familyType: 'Chakra Petch';
             }
         }
         .searchs{
-            width: 100%;
+            position: relative;
+            width: auto;
             height: 99px;
-            background-color: magenta;
+            background-color: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            margin-bottom: 3.9%;
             .search_title{
-                width: 100%;
-                height: 20px;
-                background-color: red;
+                position: absolute;
+                margin-left: 0.2%;
+                margin-top: 0.2%;
+                width: 99.6%;
+                height: 24px;
+                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 0.4%;
+                padding-top: 0.2%;
             }
             .search{
+                align-items: center;
+                width: 57px;
+                height: 23px;
                 .in_search{
+                    position: absolute;
                     width: 100%;
+                    margin-left: 1%;
+                }
+                .txtSearch{
+                    position: absolute;
+                    border: 1px solid #979797;
+                    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                    width: 1075px;
                     height: 48px;
-                    background-color: chartreuse;
+                    color: black;
+                    margin-top: 3.1%;
+                    padding-left: 1.1%;
+                    margin-left: 1%;
                 }
                 .btn_search{
-                    width: 100%;
+                    position: absolute;
+                    width: 102px;
                     height: 36px;
-                    background-color: cyan;
+                    right: 1.3%;
+                    margin-top: 3.7%;
+                    background: #E6E6E6;
+                    border: 1px solid #808080;
+                    box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                    font-family: $familyType;
+                    font-size: 16px;
+                    color: #B4B4B4;
+                    letter-spacing: 0;
+                    line-height: 18px;
+                    .search-icon{
+                        margin-right: 5.7%;
+                        color: #B4B4B4;
+                    }
                 }
             }
         }
@@ -174,7 +212,7 @@ $familyType: 'Chakra Petch';
             .daily_suggest{
                 width: 100%;
                 height: 32px;
-                background-color: grey;
+                background-color: blue;
             }
             .img_suggest{
                 display: flex;
@@ -215,7 +253,7 @@ $familyType: 'Chakra Petch';
                 }
             }
         }
-        .body{
+        .tetra{
             width: 100%;
             height: auto;
             background-color: midnightblue;

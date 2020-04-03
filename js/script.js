@@ -4,12 +4,15 @@ let btnThemDay=document.getElementById('themDay');
 let btnThemNight=document.getElementById('themNight');
 let btnChooseThem=document.getElementById('btn_downArrow');
 let dropdownContent=document.getElementById('dropdown-content');
+let btnSearch=document.getElementById('btn_search');
+let txtSearch=document.getElementById('txtSearch');
 
 /*Creo eventos listener*/
 btnThemDay.addEventListener('click', toDayTheme);
 btnThemNight.addEventListener('click', toNightTheme);
 btnChooseThem.addEventListener('click', chooseThem);
 dropdownContent.addEventListener('mouseleave', hideChooseThem);
+btn_search.addEventListener('click', searhGifOs);
 
 /*Sección de funciones*/
 function toDayTheme(){
@@ -27,4 +30,8 @@ function chooseThem(){
 }
 function hideChooseThem(){
     dropdownContent.style.display="none";
+}
+function searhGifOs(){
+    console.log(txtSearch.value);
+    
 }
