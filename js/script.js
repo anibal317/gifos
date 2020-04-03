@@ -33,5 +33,4 @@ function hideChooseThem(){
 }
 function searhGifOs(){
     console.log(txtSearch.value);
-    
 }
