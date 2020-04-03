@@ -1,13 +1,30 @@
+/*Asignación de controles DOM a variables*/
 let cssInUse=document.getElementById('lnkStyleSheet');
 let btnThemDay=document.getElementById('themDay');
 let btnThemNight=document.getElementById('themNight');
+let btnChooseThem=document.getElementById('btn_downArrow');
+let dropdownContent=document.getElementById('dropdown-content');
 
-btnThemDay.addEventListener('click', chooseThemDay);
-btnThemNight.addEventListener('click', chooseThemNight);
+/*Creo eventos listener*/
+btnThemDay.addEventListener('click', toDayTheme);
+btnThemNight.addEventListener('click', toNightTheme);
+btnChooseThem.addEventListener('click', chooseThem);
+dropdownContent.addEventListener('mouseleave', hideChooseThem);
 
-function chooseThemDay(){
+/*Sección de funciones*/
+function toDayTheme(){
     cssInUse.href='css/dayStyle.css';
 }
-function chooseThemNight(){
+function toNightTheme(){
     cssInUse.href='css/nightStyle.css';
+}
+function chooseThem(){
+    if (dropdownContent.style.display==='block'){
+        dropdownContent.style.display = "none";
+    }else{
+        dropdownContent.style.display = "block";
+    }
+}
+function hideChooseThem(){
+    dropdownContent.style.display="none";
 }
