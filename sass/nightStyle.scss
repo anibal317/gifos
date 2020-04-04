@@ -8,13 +8,18 @@
 /*Variables*/
 $urlLoadingImg: url("/assets/loading-gif-transparent.gif");
 $day_title_background: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+$night_title_background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+
 $text_color: white;
+
 $day_general_background: #FFF4FD;
 $night_general_background: #110038;
+
 $backgroudColor_btn:#F7C9F3;
 $familyType: 'Chakra Petch';
 
-
+$dayLogo: url("/assets/gifOF_logo.png");
+$nightLogo: url("/assets/gifOF_logo_dark.png");
 
 /*General Styles*/
 *{
@@ -37,7 +42,7 @@ body{
     .box_title{
         width: 100%;
         height: 23px;
-        background-image: $day_title_background;
+        background-image: $night_title_background;
         box-shadow: 0 1px 0 0 #110038;
         display: table;
         padding-left: 0.5%;
@@ -116,9 +121,11 @@ body{
                         }
                         .dayBox:hover{
                             background-color: #4180F6;
+                            cursor: pointer;
                         }
                         .nightBox:hover{
                             background-color: #4180F6;
+                            cursor: pointer;
                         }
                         .nightBox{
                             background: #F0F0F0;
@@ -146,6 +153,14 @@ body{
                 margin-left: 0;
                 margin-top: 2.1%;
                 margin-right: 47.6%;
+                .logo{
+                    width: 102.6px;
+                    height: 64px;
+                    background-image: $nightLogo;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100%;
+                }
             }
         }
         .searchs{
@@ -154,14 +169,14 @@ body{
             height: 99px;
             background-color: #E6E6E6;
             box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-            margin-bottom: 3.9%;
+            margin-bottom: 9.3%;
             .search_title{
                 position: absolute;
                 margin-left: 0.2%;
                 margin-top: 0.2%;
                 width: 99.6%;
                 height: 24px;
-                background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                background-image: $night_title_background;
                 font-size: 14px;
                 font-weight: 400;
                 padding-left: 0.4%;
@@ -171,11 +186,6 @@ body{
                 align-items: center;
                 width: 57px;
                 height: 23px;
-                .in_search{
-                    position: absolute;
-                    width: 100%;
-                    margin-left: 1%;
-                }
                 .txtSearch{
                     position: absolute;
                     border: 1px solid #979797;
@@ -207,6 +217,22 @@ body{
                     }
                 }
             }
+            .lstSuggested{
+                margin-top: 6.3%;
+                width: 100%;
+                height: 110px;
+                display: flex;
+                .lnkSuggested{
+                    margin-top: 1%;
+                    height: 34px;
+                    padding-top: 0.27%;
+                    padding-left: 0.5%;
+                    padding-right: 0.5%;
+                    background: #4180F6;
+                    border: 1px solid #4C2F99;
+                    box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+                }
+            }
         }
         .suggestions{
             .daily_suggest{
@@ -224,11 +250,14 @@ body{
                 margin-bottom: 1.1%;
             }
             .img_suggest{
-                display: flex;
-                background-color: aqua;
-                .img_daily1, .img_daily2, .img_daily3, .img_daily4{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+                margin-bottom: 3.9%;
+                .img_daily{
                     width: 100px;
                     height: 100px;
+                    display: table-column;
                     background-color: black;
                     background-image: $urlLoadingImg;
                     background-repeat: no-repeat;
@@ -241,45 +270,38 @@ body{
         .trending{
             width: 100%;
             height: auto;
-            background-color: mediumorchid;
-            .search_trending{
+            .trending_title{
                 width: 100%;
                 height: 32px;
-                background-color: purple;
+                background: #FFFAFE;
+                border: 1px solid #E6BBE2;
+                box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+                font-family: $familyType;
+                font-size: 14px;
+                color: #110038; 
+                letter-spacing: 0;
+                padding-left: 0.5% ;
+                padding-top: 0.4%;
+                margin-bottom: 1.1%;
             }
-            .img_trending{
-                display: flex;
-                .img_trending1, .img_trending2, .img_trending3, .img_trending4{
+            .imgTrending{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+                margin-bottom: 3.9%;
+                .img_trending{
                     width: 100px;
                     height: 100px;
+                    display: table-column;
                     background-color: black;
                     background-image: $urlLoadingImg;
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 50%;
-                    display: flex;
-                    margin: 1.3% auto ;
+                    margin: 1.3% auto;
                 }
             }
         }
-        .tetra{
-            width: 100%;
-            height: auto;
-            background-color: midnightblue;
-            .gifs{
-                display: flex;
-                .img_body1, .img_body2, .img_body3, .img_body4{
-                    width: 100px;
-                    height: 100px;
-                    background-color: black;
-                    background-image: $urlLoadingImg;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 50%;
-                    display: flex;
-                    margin: 1.3% auto ;
-                }
-            }
-        }
-    }   
+    }
 }
+

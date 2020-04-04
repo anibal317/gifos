@@ -29,8 +29,8 @@ body {
 .container .box_title {
   width: 100%;
   height: 23px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
           box-shadow: 0 1px 0 0 #110038;
   display: table;
@@ -134,10 +134,12 @@ body {
 
 .container .sub_container .header .btn_headers .dropdown .dropdown-content .dayBox:hover {
   background-color: #4180F6;
+  cursor: pointer;
 }
 
 .container .sub_container .header .btn_headers .dropdown .dropdown-content .nightBox:hover {
   background-color: #4180F6;
+  cursor: pointer;
 }
 
 .container .sub_container .header .btn_headers .dropdown .dropdown-content .nightBox {
@@ -169,6 +171,15 @@ body {
   margin-right: 47.6%;
 }
 
+.container .sub_container .header .frameLogo .logo {
+  width: 102.6px;
+  height: 64px;
+  background-image: url("/assets/gifOF_logo_dark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
 .container .sub_container .searchs {
   position: relative;
   width: auto;
@@ -176,7 +187,7 @@ body {
   background-color: #E6E6E6;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  margin-bottom: 3.9%;
+  margin-bottom: 9.3%;
 }
 
 .container .sub_container .searchs .search_title {
@@ -185,8 +196,8 @@ body {
   margin-top: 0.2%;
   width: 99.6%;
   height: 24px;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
   font-size: 14px;
   font-weight: 400;
   padding-left: 0.4%;
@@ -199,12 +210,6 @@ body {
           align-items: center;
   width: 57px;
   height: 23px;
-}
-
-.container .sub_container .searchs .search .in_search {
-  position: absolute;
-  width: 100%;
-  margin-left: 1%;
 }
 
 .container .sub_container .searchs .search .txtSearch {
@@ -242,6 +247,27 @@ body {
   color: #B4B4B4;
 }
 
+.container .sub_container .searchs .lstSuggested {
+  margin-top: 6.3%;
+  width: 100%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sub_container .searchs .lstSuggested .lnkSuggested {
+  margin-top: 1%;
+  height: 34px;
+  padding-top: 0.27%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+
 .container .sub_container .suggestions .daily_suggest {
   width: 100%;
   height: 32px;
@@ -259,15 +285,18 @@ body {
 }
 
 .container .sub_container .suggestions .img_suggest {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: aqua;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 3.9%;
 }
 
-.container .sub_container .suggestions .img_suggest .img_daily1, .container .sub_container .suggestions .img_suggest .img_daily2, .container .sub_container .suggestions .img_suggest .img_daily3, .container .sub_container .suggestions .img_suggest .img_daily4 {
+.container .sub_container .suggestions .img_suggest .img_daily {
   width: 100px;
   height: 100px;
+  display: table-column;
   background-color: black;
   background-image: url("/assets/loading-gif-transparent.gif");
   background-repeat: no-repeat;
@@ -279,58 +308,42 @@ body {
 .container .sub_container .trending {
   width: 100%;
   height: auto;
-  background-color: mediumorchid;
 }
 
-.container .sub_container .trending .search_trending {
+.container .sub_container .trending .trending_title {
   width: 100%;
   height: 32px;
-  background-color: purple;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
 }
 
-.container .sub_container .trending .img_trending {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container .sub_container .trending .imgTrending {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 3.9%;
 }
 
-.container .sub_container .trending .img_trending .img_trending1, .container .sub_container .trending .img_trending .img_trending2, .container .sub_container .trending .img_trending .img_trending3, .container .sub_container .trending .img_trending .img_trending4 {
+.container .sub_container .trending .imgTrending .img_trending {
   width: 100px;
   height: 100px;
+  display: table-column;
   background-color: black;
   background-image: url("/assets/loading-gif-transparent.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1.3% auto;
-}
-
-.container .sub_container .tetra {
-  width: 100%;
-  height: auto;
-  background-color: midnightblue;
-}
-
-.container .sub_container .tetra .gifs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container .sub_container .tetra .gifs .img_body1, .container .sub_container .tetra .gifs .img_body2, .container .sub_container .tetra .gifs .img_body3, .container .sub_container .tetra .gifs .img_body4 {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  background-image: url("/assets/loading-gif-transparent.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 1.3% auto;
 }
 /*# sourceMappingURL=nightStyle.css.map */
