@@ -188,7 +188,16 @@ body {
   margin-top: 3.2%;
   left: 435px;
   border: none;
-  width: 76px;
+  width: 95px;
+}
+
+.container .sub_container .header .btn_headers .btn_misGifos:hover {
+  border: 1px solid #110038;
+}
+
+.container .sub_container .header .btn_headers .myGifOsSpan {
+  text-decoration: underline;
+  color: black;
 }
 
 .container .sub_container .header .frameLogo {
@@ -201,10 +210,7 @@ body {
 .container .sub_container .header .frameLogo .logo {
   width: 102.6px;
   height: 64px;
-  background-image: url("/assets/gifOF_logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  content: url("/assets/gifOF_logo.png");
 }
 
 .container .sub_container .searchs {
@@ -274,6 +280,43 @@ body {
   color: #B4B4B4;
 }
 
+.container .sub_container .searchs .suggestedList {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content {
+  margin-top: 75px;
+  background-color: #E6E6E6;
+  display: none;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+  height: auto;
+  padding-bottom: 0.1%;
+  padding-top: 0.01%;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content .suggestedItem {
+  width: 1075px;
+  letter-spacing: 0;
+  line-height: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 5px;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content .lnk {
+  color: #110038;
+}
+
 .container .sub_container .searchs .lstSuggested {
   margin-top: 6.3%;
   width: 100%;
@@ -325,10 +368,7 @@ body {
   height: 100px;
   display: table-column;
   background-color: black;
-  background-image: url("/assets/loading-gif-transparent.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
   margin: 1.3% auto;
 }
 
@@ -367,10 +407,7 @@ body {
   height: 100px;
   display: table-column;
   background-color: black;
-  background-image: url("/assets/loading-gif-transparent.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
   margin: 1.3% auto;
 }
 /*# sourceMappingURL=dayStyle.css.map */

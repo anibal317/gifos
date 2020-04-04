@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/dayStyle.css" id="lnkStyleSheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>¡Bienvenidos/as a Guifos.com!</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/dayStyle.css" id="lnkStyleSheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>¡Bienvenidos/as a Guifos.com!</title>
+    </head>
 
-<body>
-    <div class="container">
-        <div class="box_title">
-            <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
-        </div>
-        <div class="sub_container">
-            <div class="nav">
-                <nav class="header">
-                    <div class="frameLogo">
-                        <img class="logo" id="logo">
-                    </div>
-                    <div class="btn_headers">
-                        <button class="btn_createGifo">Crear Guifos</button>                    
-                        <div class="dropdown">
-                            <button class="btn_pos btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
-                            <button class="btn_pos btn_downArrow" id="btn_downArrow"><img src="./assets/dropdown.svg" alt=""></button>
-                            <div class="dropdown-content" id="dropdown-content">
-                                <div class="linkThem dayBox"><a href="#" id="themDay">Saylor Day</a></div>
-                                <div class="linkThem nightBox"><a href="#" id="themNight">Saylor Night</a></div>
-                            </div>
+    <body>
+        <div class="container">
+            <div class="box_title">
+                <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+            <div class="sub_container">
+                <div class="nav">
+                    <nav class="header">
+                        <div class="frameLogo">
+                            <img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.os">
                         </div>
-                        <button class="btn_misGifos"> <span style="text-decoration: underline; color: black;">M</span>is Guifos</button>
+                        <div class="btn_headers">
+                            <button class="btn_createGifo">Crear Guifos</button>                    
+                            <div class="dropdown">
+                                <button class="btn_pos btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
+                                <button class="btn_pos btn_downArrow" id="btn_downArrow"><img src="./assets/dropdown.svg" alt="dropdown arrow"></button>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <div class="linkThem dayBox" id="dayBox"><a href="#" id="themDay">Saylor Day</a></div>
+                                    <div class="linkThem nightBox" id="nightBox"><a href="#" id="themNight">Saylor Night</a></div>
+                                </div>
+                            </div>
+                            <button class="btn_misGifos"> <span class="myGifOsSpan">M</span>is Guifos</button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="searchs">
+                    <div class="search_title">Buscar</div>
+                    <div class="search">
+                        <input type="text" class="txtSearch" id="txtSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                        <button class="btn_search" id="btn_search"><i class="fas fa-search search-icon"></i>Buscar</button>
                     </div>
-                </nav>
-            </div>
-            <div class="searchs">
-                <div class="search_title">Buscar</div>
-                <div class="search">
-                    <input type="text" class="txtSearch" id="txtSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button class="btn_search" id="btn_search"><i class="fas fa-search search-icon"></i>Buscar</button>
+                    <div class="suggestedList">
+                        <div class="suggestedList-content" id="dropdown-content1">
+                            <div class="suggestedItem" id="item1"><a href="#" class="lnk" id="lnk1">Resultado de búsqueda sugerido</a></div>
+                            <div class="suggestedItem" id="item2"><a href="#" class="lnk" id="lnk2">Un resultado similar de búsqueda</a></div>
+                            <div class="suggestedItem" id="item3"><a href="#" class="lnk" id="lnk3">Y otro más</a></div>
+                        </div>
+                    </div>
+                    <div class="lstSuggested">
+                        <div class="lnkSuggested" id="lnkSuggested1">#link 1</div> 
+                        <div class="lnkSuggested" id="lnkSuggested2">#link 2</div> 
+                        <div class="lnkSuggested" id="lnkSuggested3">#link 3</div> 
+                        <div class="lnkSuggested" id="lnkSuggested4">#link 4</div> 
+                    </div>
                 </div>
-                <div class="lstSuggested">
-                    <div class="lnkSuggested" id="lnkSuggested1">#link 1</div> 
-                    <div class="lnkSuggested" id="lnkSuggested2">#link 2</div> 
-                    <div class="lnkSuggested" id="lnkSuggested3">#link 3</div> 
-                    <div class="lnkSuggested" id="lnkSuggested4">#link 4</div> 
+                <div class="suggestions">
+                    <div class="daily_suggest">Hoy te sugerimos:</div>
+                    <div class="img_suggest">
+                        <img class="img_daily" id="img_daily1" alt="loading img" src="#">
+                        <img class="img_daily" id="img_daily2" alt="loading img" src="#">
+                        <img class="img_daily" id="img_daily3" alt="loading img" src="#">
+                        <img class="img_daily" id="img_daily4" alt="loading img" src="#">
+                    </div>
                 </div>
-            </div>
-            <div class="suggestions">
-                <div class="daily_suggest">Hoy te sugerimos:</div>
-                <div class="img_suggest">
-                    <img class="img_daily" id="img_daily1">
-                    <img class="img_daily" id="img_daily2">
-                    <img class="img_daily" id="img_daily3">
-                    <img class="img_daily" id="img_daily4">
-                </div>
-            </div>
-            <div class="trending">
-                <div class="trending_title">Tendencias:</div>
-                <div class="imgTrending">
-                    <img class="img_trending" id="img_trending1">
-                    <img class="img_trending" id="img_trending2">
-                    <img class="img_trending" id="img_trending3">
-                    <img class="img_trending" id="img_trending4">
+                <div class="trending">
+                    <div class="trending_title">Tendencias:</div>
+                    <div class="imgTrending">
+                        <img class="img_trending" id="img_trending1" alt="loading img" src="#">
+                        <img class="img_trending" id="img_trending2" alt="loading img" src="#">
+                        <img class="img_trending" id="img_trending3" alt="loading img" src="#">
+                        <img class="img_trending" id="img_trending4" alt="loading img" src="#">
+                    </div>
                 </div>
             </div>
         </div>
-    <div>
         <script src="./js/script.js"></script>
-</body>
-
+    </body>
 </html>
