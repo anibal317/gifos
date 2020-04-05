@@ -284,17 +284,56 @@ body{
                 margin-bottom: 1.1%;
             }
             .img_suggest{
+                width: 100%;
+                height: 310px;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-gap: 10px;
+                grid-template-columns: repeat(4, auto);
                 margin-bottom: 3.9%;
-                .img_daily{
-                    width: 100px;
-                    height: 100px;
-                    display: table-column;
-                    background-color: black;
-                    content: $urlLoadingImg;
-                    margin: 1.3% auto;
+                grid-auto-rows: minmax(100px, 10px);
+                .imgFrame{
+                    width: 280px;
+                    height: 280px;
+                    margin: 0 auto;
+                    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+                    letter-spacing: 0;
+                    .img_daily{
+                        content: $urlLoadingImg;
+                        width: 100%;
+                        height: 100%;
+                        display: table-row;
+                        background: #E6E6E6;
+                        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    }
+                    .img_daily1{
+                        width: 100%;
+                        height: 100%;
+                        display: table-row;
+                        background: #E6E6E6;
+                        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                    }
+                    .imgframeTitle{
+                        position: relative;
+                        height: 24px;
+                        width: auto;
+                        margin: 0 auto;
+                        .title {
+                            vertical-align: middle;
+                            position: absolute;
+                            color: #FFFFFF; 
+                            font-family: $familyType;
+                            font-size: 14px;
+                            font-weight: bold;
+                            margin-top: 0.4%;
+                            margin-left: 1.0%;
+                        }
+                        .btn-Close{
+                            margin-top: 1.1%;
+                            width: 16px;
+                            height: 14px;
+                            position: absolute;
+                            right: 1px;
+                        }
+                    }
                 }
             }
         }

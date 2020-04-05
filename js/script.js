@@ -8,6 +8,9 @@ let btnChooseThem=document.getElementById('btn_downArrow');
 let dropdownContent=document.getElementById('dropdown-content');
 let btnSearch=document.getElementById('btn_search');
 let txtSearch=document.getElementById('txtSearch');
+let img_suggest=document.getElementById('img_suggest');
+let btn_misGifos=document.getElementById('btn_misGifos');
+let maxSuggestedResult=4;
 
 /*Creo eventos listener*/
 btnThemDay.addEventListener('click', toDayTheme);
@@ -17,6 +20,9 @@ dropdownContent.addEventListener('mouseleave', hideChooseThem);
 btn_search.addEventListener('click', searhGifOs);
 dayBox.addEventListener('click', toDayTheme);
 nightBox.addEventListener('click', toNightTheme);
+/*btn_misGifos.addEventListener('click',trending);*/
+
+trending();
 
 /*Sección de funciones*/
 function toDayTheme(){
@@ -38,3 +44,27 @@ function hideChooseThem(){
 function searhGifOs(){
     console.log(txtSearch.value);
 }
+
+async function trending() {
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit="+maxSuggestedResult+"&rating=G")
+      .then(respuesta => respuesta.json())
+      .then((dato) => dato);
+      
+    img_suggest.innerHTML = ' ';
+      
+    resultado.data.forEach((element, index) => {
+    img_suggest.innerHTML +=` 
+                        <div class="imgFrame">
+                            <div class="imgframeTitle">
+                                <p class="title">${element['title']}</p>
+                                <button class="btn-Close" id="btn-Close"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <img class="img_daily1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
+                        </div>
+                        `;
+        //<img class="img_daily_" id="${element['id']}" alt="load${element['title']}ing img" src="${element['images'].original.url}">
+    });
+  }
+
+  
+  
