@@ -376,15 +376,43 @@ body{
             }
             .imgTrending{
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                grid-gap: 10px;
+                grid-template-columns: repeat(4, 25%);
+                grid-row-gap: 10px;
                 margin-bottom: 3.9%;
+                .frmImgsTrending{
+                    width: 280px;
+                    height:280px;
+                    margin: 0 auto;
+                    letter-spacing: 0;
+                    .frmTrendingTitle{
+                        height: 24px;
+                        width: 100%;
+                        background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                        display: none;
+                        .trendingTitle{
+                            vertical-align: middle;
+                            color: #FFFFFF; 
+                            font-family: $familyType;
+                            font-size: 14px;
+                            font-weight: bold;
+                            margin-left: 1.0%;
+                            background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                        }
+                    }
+                }
                 .img_trending{
                     width: 100px;
                     height: 100px;
                     display: table-column;
                     background-color: black;
                     content: $urlLoadingImg;
+                    margin: 1.3% auto;
+                }
+                .img_trending1{
+                    width: 100%;
+                    height: 100%;
+                    display: table-row;
+                    background-color: black;
                     margin: 1.3% auto;
                 }
             }

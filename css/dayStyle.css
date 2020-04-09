@@ -443,10 +443,36 @@ body {
 .container .sub_container .trending .imgTrending {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  grid-row-gap: 10px;
   margin-bottom: 3.9%;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  letter-spacing: 0;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle {
+  height: 24px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  display: none;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle .trendingTitle {
+  vertical-align: middle;
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 1.0%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
 }
 
 .container .sub_container .trending .imgTrending .img_trending {
@@ -455,6 +481,14 @@ body {
   display: table-column;
   background-color: black;
   content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  margin: 1.3% auto;
+}
+
+.container .sub_container .trending .imgTrending .img_trending1 {
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background-color: black;
   margin: 1.3% auto;
 }
 /*# sourceMappingURL=dayStyle.css.map */
