@@ -9,9 +9,10 @@ let dropdownContent=document.getElementById('dropdown-content');
 let btnSearch=document.getElementById('btn_search');
 let txtSearch=document.getElementById('txtSearch');
 let img_suggest=document.getElementById('img_suggest');
-let img_trending=document.getElementById('frmImgsTrending');
+let img_trending=document.getElementById('imgTrending');
 let btn_misGifos=document.getElementById('btn_misGifos');
 let maxSuggestedResult=4;
+let btn=document.getElementById('frmTrendingTitle');
 
 /*Creo eventos listener*/
 btnThemDay.addEventListener('click', toDayTheme);
@@ -21,6 +22,7 @@ dropdownContent.addEventListener('mouseleave', hideChooseThem);
 btn_search.addEventListener('click', searhGifOs);
 dayBox.addEventListener('click', toDayTheme);
 nightBox.addEventListener('click', toNightTheme);
+btn.addEventListener('mouseover', showTitle);
 /*btn_misGifos.addEventListener('click',trending);*/
 
 seggest();
@@ -48,7 +50,7 @@ function searhGifOs(){
 }
 
 async function seggest() {
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit="+maxSuggestedResult+"&rating=G&lang=en")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=PG-13")
       .then(respuesta => respuesta.json())
       .then((dato) => dato);
       
@@ -70,29 +72,31 @@ async function seggest() {
 
   
   async function trending() {
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit=2&rating=PG&lang=en")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit=25&rating=PG-13&lang=en")
       .then(respuesta => respuesta.json())
       .then((dato) => dato);
       
-    img_suggest.innerHTML = ' ';
+      img_trending.innerHTML = ' ';
       
     resultado.data.forEach((element, index) => {
         img_trending.innerHTML +=` 
-                        <div class="frmImgsTrending">
-                            <img class="img_trending1" id="-${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
-                            <div class="frmTrendingTitle">
-                                <p class="trendingTitle">${splitSlug(element['slug']).trim()}</p>
-                            </div>
-                        </div>
+            <div class="frmImgsTrending" id="frmImgsTrending" ">
+                <img class="img_trending1" id="-${element['id']}" alt="${element['title']}" src="${element['images'].downsized_large.url}" >
+                <div class="frmTrendingTitle" id="frmTrendingTitle">
+                    <p class="trendingTitle" id="trendingTitle">${splitSlug(element['slug']).trim()}</p>
+                </div>
+            </div>
                         `;
         //<img class="img_daily_" id="${element['id']}" alt="load${element['title']}ing img" src="${element['images'].original.url}">
     });
   }
 
-  function splitSlug(strSlug){
-      strfinal='';
+function splitSlug(strSlug){
+    strfinal='';
     strSlug.split("-").forEach(element => strfinal+="#"+element+" ");
     return strfinal;
 }
-
-  splitSlug("kristen-stewart-ok-kstew-HynSPcwIlaFVe");
+function showTitle(){
+    //btn.style.display = "block";
+    console.log("Over");
+}

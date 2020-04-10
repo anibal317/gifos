@@ -398,6 +398,8 @@ body {
   height: 24px;
   width: auto;
   margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle .title {
@@ -445,7 +447,7 @@ body {
   display: grid;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
-  grid-row-gap: 10px;
+  grid-row-gap: 50px;
   margin-bottom: 3.9%;
 }
 
@@ -459,8 +461,13 @@ body {
 .container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle {
   height: 24px;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  margin-top: -27px;
+  position: -webkit-sticky;
+  position: sticky;
   display: none;
 }
 
@@ -485,9 +492,9 @@ body {
 }
 
 .container .sub_container .trending .imgTrending .img_trending1 {
-  width: 100%;
-  height: 100%;
-  display: table-row;
+  width: 280px;
+  height: 280px;
+  display: table-column;
   background-color: black;
   margin: 1.3% auto;
 }
