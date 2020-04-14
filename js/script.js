@@ -12,7 +12,9 @@ let img_suggest=document.getElementById('img_suggest');
 let img_trending=document.getElementById('imgTrending');
 let btn_misGifos=document.getElementById('btn_misGifos');
 let maxSuggestedResult=4;
-let btn=document.getElementById('frmTrendingTitle');
+let btn=document.getElementById('frmImgsTrending');
+let title=document.getElementById('frmTrendingTitle');
+
 
 /*Creo eventos listener*/
 btnThemDay.addEventListener('click', toDayTheme);
@@ -22,19 +24,29 @@ dropdownContent.addEventListener('mouseleave', hideChooseThem);
 btn_search.addEventListener('click', searhGifOs);
 dayBox.addEventListener('click', toDayTheme);
 nightBox.addEventListener('click', toNightTheme);
-btn.addEventListener('mouseover', showTitle);
-/*btn_misGifos.addEventListener('click',trending);*/
+
 
 seggest();
 trending();
 
+window.addEventListener('scroll', function(){
+    if((parseInt(document.scrollingElement.scrollHeight)-parseInt(window.scrollY)==341)){
+        console.log(parseInt(document.scrollingElement.scrollHeight)-parseInt(window.scrollY));
+        //trending();
+    }else{
+        console.log("segui scrolleando");
+        console.log(parseInt(document.scrollingElement.scrollHeight)-parseInt(window.scrollY));
+    }
+})
 /*Sección de funciones*/
 function toDayTheme(){
     cssInUse.href='css/dayStyle.css';
 }
+
 function toNightTheme(){
     cssInUse.href='css/nightStyle.css';
 }
+
 function chooseThem(){
     if (dropdownContent.style.display=='block'){
         dropdownContent.style.display = "none";
@@ -42,15 +54,17 @@ function chooseThem(){
         dropdownContent.style.display = "block";
     }
 }
+
 function hideChooseThem(){
     dropdownContent.style.display="none";
 }
+
 function searhGifOs(){
     console.log(txtSearch.value);
 }
 
 async function seggest() {
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=PG-13")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=G&lang=es")
       .then(respuesta => respuesta.json())
       .then((dato) => dato);
       
@@ -66,13 +80,11 @@ async function seggest() {
                             <img class="img_daily1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
                         </div>
                         `;
-        //<img class="img_daily_" id="${element['id']}" alt="load${element['title']}ing img" src="${element['images'].original.url}">
     });
   }
-
   
   async function trending() {
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit=25&rating=PG-13&lang=en")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit=4&rating=PG-13&lang=en")
       .then(respuesta => respuesta.json())
       .then((dato) => dato);
       
@@ -80,23 +92,28 @@ async function seggest() {
       
     resultado.data.forEach((element, index) => {
         img_trending.innerHTML +=` 
-            <div class="frmImgsTrending" id="frmImgsTrending" ">
-                <img class="img_trending1" id="-${element['id']}" alt="${element['title']}" src="${element['images'].downsized_large.url}" >
-                <div class="frmTrendingTitle" id="frmTrendingTitle">
-                    <p class="trendingTitle" id="trendingTitle">${splitSlug(element['slug']).trim()}</p>
+            <div class="frmImgsTrending" id="frmImgsTrending"  onmouseover="yesTitle()" onmouseleave="noTitle()">
+                <img class="img_trending1" id="${element['id']}" "alt="${element['title']}" src="${element['images'].downsized_large.url}">
+                <div class="frmTrendingTitle" id"frmTrendingTitle" onmouseover="event.stopPropagation()" >
+                    <p class="trendingTitle" >${splitSlug(element['slug']).trim()}</p>
                 </div>
             </div>
-                        `;
-        //<img class="img_daily_" id="${element['id']}" alt="load${element['title']}ing img" src="${element['images'].original.url}">
+                 `;
     });
+    
   }
+
+function yesTitle(){
+    event.toElement.nextElementSibling.style.display="block";
+}
+
+function noTitle(){
+    event.target.lastElementChild.style.display="none";
+}
 
 function splitSlug(strSlug){
     strfinal='';
     strSlug.split("-").forEach(element => strfinal+="#"+element+" ");
     return strfinal;
 }
-function showTitle(){
-    //btn.style.display = "block";
-    console.log("Over");
-}
+

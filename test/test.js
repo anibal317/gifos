@@ -1,5 +1,7 @@
-function splitSlug(strSlug){
-  strSlug.split("-").forEach(element => console.log("#"+element));
-}
+let btntxt=document.getElementById('txtInput');
 
-splitSlug("kristen-stewart-ok-kstew-HynSPcwIlaFVe");
+btntxt.addEventListener('keyup', clis);
+
+function clis(){
+  console.log(btntxt.value);
+}
