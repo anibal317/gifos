@@ -1,4 +1,3 @@
-/*Asignación de controles DOM a variables*/
 let cssInUse=document.getElementById('lnkStyleSheet');
 let btnThemDay=document.getElementById('themDay');
 let btnThemNight=document.getElementById('themNight');
@@ -12,37 +11,30 @@ let img_trending=document.getElementById('imgTrending');
 let btnSearch=document.getElementById('btn_search');
 let img_mySearchs=document.getElementById('img_mySearchs');
 let tituloMySearchs=document.getElementById('listSearchs');
+let suggestedList=document.getElementById('dropdown-content1');
+let searchedList=document.getElementById('suggestedList');
+
 const maxSuggestedResult=4;
 let strBusqueda='';
 
-/*Obtengo en variables las Secciones Generales*/
 let sectionSearchs=document.getElementsByClassName('searchs');
 let sectionSuggestions=document.getElementsByClassName('suggestions');
 let sectionTrending=document.getElementsByClassName('trending');
 let sectionMySearchs=document.getElementsByClassName('mySearchs');
 
-/*Creo eventos listener*/
 btnThemDay.addEventListener('click', toDayTheme);
 btnThemNight.addEventListener('click', toNightTheme);
 btnChooseThem.addEventListener('click', chooseThem);
 dropdownContent.addEventListener('mouseleave', hideChooseThem);
-btnSearch.addEventListener('click', searchGifs);
+btnSearch.addEventListener('click', showSearch);
 txtSearch.addEventListener('keyup', searhGifOs);
 dayBox.addEventListener('click', toDayTheme);
 nightBox.addEventListener('click', toNightTheme);
 
-
 suggest();
 trending();
 
-
-/**Oculto la sección de búsqueda */
-//sectionSearchs[0].hidden = true;
-//sectionSuggestions[0].hidden = true;
-//sectionTrending[0].hidden=true;
 sectionMySearchs[0].hidden=true;
-
-/*Sección de funciones*/
 
 function toDayTheme(){
     cssInUse.href='css/dayStyle.css';
@@ -61,7 +53,27 @@ function hideChooseThem(){
     dropdownContent.style.display="none";
 }
 function searhGifOs(){ //dropdown
-    strBusqueda = txtSearch.value;
+    let resultado=searchGifos();
+    suggestedList.innerHTML='';
+    
+    resultado.then(res =>{
+        if(res.data.length!=0){
+            searchedList.style.display='block';
+
+            suggestedList.innerHTML=`
+                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
+                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
+                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
+                `;
+        }else{
+            suggestedList.innerHTML=`
+                    <div class="suggestedItem" id="item1"><a href="#" class="lnk" id="1">No se encontraron resultados</a></div>`;
+        }
+    });
+        if(strBusqueda===''){
+            searchedList.style.display='none';
+        }
+    
 }
 async function suggest() {
     let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=G&lang=es")
@@ -100,30 +112,51 @@ async function trending() {
                  `;
     });
 }
-async function searchGifs() {
+function fromLinToInput(){
+    txtSearch.value=event.toElement.innerText;
+    strBusqueda=txtSearch.value;
+}
+async function searchGifos(){
+    searchedList.style.display='none';
+    strBusqueda = txtSearch.value;
+    
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit=12&offset=0&rating=G&lang=en")
+    .then(respuesta => respuesta.json())
+    .then((dato) => dato);
+
+    return resultado;
+}
+
+async function showSearch() {
     sectionSearchs[0].hidden = false;
     sectionSuggestions[0].hidden = true;
     sectionTrending[0].hidden=true;
     sectionMySearchs[0].hidden=false;
     
-    txtSearch.value="";
-
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit=12&offset=0&rating=G&lang=en")
-    .then(respuesta => respuesta.json())
-    .then((dato) => dato);
     
-    img_mySearchs.innerHTML = ' ';
-    tituloMySearchs.innerText += " "+strBusqueda;
-    resultado.data.forEach((element, index) => {
-    img_mySearchs.innerHTML +=` 
-                      <div class="imgFrameSearch">
-                          <div class="imgFrameSearchTitle">
-                              <p class="titleSearchs">${element['title']}</p>
+
+    let resultado=searchGifos();
+
+    resultado.then(res => {
+        if (res.data.length!==0){
+            img_mySearchs.innerHTML = ' ';
+            tituloMySearchs.innerText += " "+strBusqueda;
+            res.data.forEach(element => {
+            img_mySearchs.innerHTML +=` 
+                          <div class="imgFrameSearch">
+                              <div class="imgFrameSearchTitle">
+                                  <p class="titleSearchs">${element['title']}</p>
+                              </div>
+                              <img class="imgSearchs1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
                           </div>
-                          <img class="imgSearchs1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
-                      </div>
-                      `;   
-});
+                          `;
+            txtSearch.value="";    
+            });
+        }else{
+            img_mySearchs.innerHTML = ' ';
+            tituloMySearchs.innerText = " No se encontraron datos para la busqueda: "+strBusqueda;
+        }
+    });
 }
 function yesTitle(){
     event.toElement.nextElementSibling.style.display="block";

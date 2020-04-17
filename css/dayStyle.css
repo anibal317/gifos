@@ -256,6 +256,7 @@ body {
   margin-top: 3.1%;
   padding-left: 1.1%;
   margin-left: 1%;
+  z-index: 100;
 }
 
 .container .sub_container .searchs .search .btn_search {
@@ -273,6 +274,7 @@ body {
   color: #B4B4B4;
   letter-spacing: 0;
   line-height: 18px;
+  z-index: 100;
 }
 
 .container .sub_container .searchs .search .btn_search .search-icon {
@@ -284,12 +286,12 @@ body {
   position: absolute;
   width: 100%;
   z-index: 3;
+  display: none;
 }
 
 .container .sub_container .searchs .suggestedList .suggestedList-content {
   margin-top: 75px;
   background-color: #E6E6E6;
-  display: none;
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
   height: auto;
