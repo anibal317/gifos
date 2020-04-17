@@ -372,6 +372,8 @@ body {
   height: 24px;
   width: auto;
   margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle .title {
@@ -419,7 +421,7 @@ body {
   display: grid;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
-  grid-row-gap: 10px;
+  grid-row-gap: 16px;
   margin-bottom: 3.9%;
 }
 
@@ -433,8 +435,13 @@ body {
 .container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle {
   height: 24px;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
   background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  margin-top: -27px;
+  position: -webkit-sticky;
+  position: sticky;
   display: none;
 }
 
@@ -445,8 +452,8 @@ body {
   font-size: 14px;
   font-weight: bold;
   margin-left: 1.0%;
-  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
-  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
 }
 
 .container .sub_container .trending .imgTrending .img_trending {
@@ -456,5 +463,88 @@ body {
   background-color: black;
   content: url("/assets/SelfishFastBoutu-size_restricted.gif");
   margin: 1.3% auto;
+}
+
+.container .sub_container .trending .imgTrending .img_trending1 {
+  width: 280px;
+  height: 280px;
+  display: table-column;
+  background-color: black;
+  margin: 1.3% auto;
+}
+
+.container .sub_container .mySearchs .listSearchs {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
+}
+
+.container .sub_container .mySearchs .img_mySearchs {
+  width: 100%;
+  height: 310px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  margin-bottom: 3.9%;
+  grid-row-gap: 30px;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  letter-spacing: 0;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgFrameSearchTitle {
+  position: relative;
+  height: 24px;
+  width: auto;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgFrameSearchTitle .titleSearchs {
+  vertical-align: middle;
+  position: absolute;
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0.4%;
+  margin-left: 1.0%;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgSearchs {
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgSearchs1 {
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 /*# sourceMappingURL=nightStyle.css.map */
