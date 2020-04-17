@@ -13,15 +13,22 @@ let img_mySearchs=document.getElementById('img_mySearchs');
 let tituloMySearchs=document.getElementById('listSearchs');
 let suggestedList=document.getElementById('dropdown-content1');
 let searchedList=document.getElementById('suggestedList');
+let btnMyGifos=document.getElementById('btn_misGifos');
 
 const maxSuggestedResult=4;
+const maxtrendingResult=24;
+const maxSearchedResult=12;
+let maxHeight=1900;
+let offset=5;
 let strBusqueda='';
+let limpiarTrending=true;
 
 let sectionSearchs=document.getElementsByClassName('searchs');
 let sectionSuggestions=document.getElementsByClassName('suggestions');
 let sectionTrending=document.getElementsByClassName('trending');
 let sectionMySearchs=document.getElementsByClassName('mySearchs');
 
+btnMyGifos.addEventListener('click', trending);
 btnThemDay.addEventListener('click', toDayTheme);
 btnThemNight.addEventListener('click', toNightTheme);
 btnChooseThem.addEventListener('click', chooseThem);
@@ -95,12 +102,15 @@ async function suggest() {
     });
 } 
 async function trending() {
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit=24&rating=PG-13&offset=5&lang=en")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit="+maxtrendingResult+"&rating=PG-13&offset="+offset+"&lang=en")
         .then(respuesta => respuesta.json())
         .then((dato) => dato);
-      
-    img_trending.innerHTML = ' ';
-      
+      console.log(limpiarTrending);
+    if(limpiarTrending){
+        img_trending.innerHTML = ' ';
+        limpiarTrending=false;
+    }
+      console.log(limpiarTrending);
     resultado.data.forEach((element, index) => {
         img_trending.innerHTML +=` 
             <div class="frmImgsTrending" id="frmImgsTrending"  onmouseover="yesTitle()" onmouseleave="noTitle()">
@@ -120,13 +130,12 @@ async function searchGifos(){
     searchedList.style.display='none';
     strBusqueda = txtSearch.value;
     
-    let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit=12&offset=0&rating=G&lang=en")
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit="+maxSearchedResult+"&offset=0&rating=G&lang=en")
     .then(respuesta => respuesta.json())
     .then((dato) => dato);
 
     return resultado;
 }
-
 async function showSearch() {
     sectionSearchs[0].hidden = false;
     sectionSuggestions[0].hidden = true;
@@ -168,4 +177,14 @@ function splitSlug(strSlug){
     strfinal='';
     strSlug.split("-").forEach(element => strfinal+="#"+element+" ");
     return strfinal;
+}
+window.onscroll = function (){
+    var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log("Scroll", scroll);
+
+    if(scroll > maxHeight){
+        trending();
+        maxHeight=maxHeight+1700;
+        offset=offset+30;
+    }
 }
