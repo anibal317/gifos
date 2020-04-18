@@ -47,9 +47,7 @@ sectionMySearchs[0].hidden=true;
 
 function listTags(strTags){
     arrTags=strTags.split('-');
-    
     lstSuggested.innerHTML='';
-    
     for(i=0; i < (arrTags.length)-1; i++){
          lstSuggested.innerHTML+=`<div class="lnkSuggested"><a href="#" onclick="showSearch()" id="${arrTags[i]}">#${arrTags[i]}</a></div> `;
     }
@@ -73,25 +71,19 @@ function hideChooseThem(){
 function searhGifOs(){ //dropdown
     let resultado=searchGifos();
     suggestedList.innerHTML='';
-    
     resultado.then(res =>{
-        if(res.data.length!=0){
+        if(res.data.length!==0){
             searchedList.style.display='block';
-
             suggestedList.innerHTML=`
-                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
-                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
-                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
                 `;
-        }else{
-            suggestedList.innerHTML=`
-                    <div class="suggestedItem" id="item1"><a href="#" class="lnk" id="1">No se encontraron resultados</a></div>`;
         }
     });
         if(strBusqueda===''){
             searchedList.style.display='none';
         }
-    
 }
 async function suggest() {
     let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=G&lang=es")
@@ -100,12 +92,12 @@ async function suggest() {
       
     img_suggest.innerHTML = '';
       
-    resultado.data.forEach((element, index) => {
+    resultado.data.forEach(element => {
     img_suggest.innerHTML +=` 
                         <div class="imgFrame" id="${element['id']}">
                             <div class="imgframeTitle">
                                 <p class="title">${element['title']}</p>
-                                <button class="btn-Close" id="btn-Close"><img data-id="${element['id']}" src="./assets/close.svg" alt=""></button>
+                                <button class="btn-Close" id="btn-Close"><img data-id="${element['id']}" src="./assets/close.svg" alt="" onclick="eliminar()"></button>
                             </div>
                             <img class="img_daily1" alt="loading img" src="${element['images'].downsized_large.url}">
                         </div>
@@ -125,7 +117,7 @@ function eliminar(){
         img_suggest.innerHTML +=` 
                                 <div class="imgFrame" id="${res.data.id}">
                                     <div class="imgframeTitle">
-                                        <p class="title">${res.data.itle}</p>
+                                        <p class="title">${res.data.title}</p>
                                         <button class="btn-Close" id="btn-Close"><img data-id="${res.data.id}" src="./assets/close.svg" alt=""></button>
                                     </div>
                                     <img class="img_daily1" alt="loading img" src="${res.data.images.downsized_large.url}">
@@ -155,15 +147,13 @@ async function trending() {
     });
 }
 function fromLinkToInput(){
-    txtSearch.value=event.toElement.innerText;
-    strBusqueda=txtSearch.value;
+    txtSearch.value = event.toElement.innerText;
+    strBusqueda = txtSearch.value;
 }
 async function searchRandom(){
-    fromLinkToInput();
-
     searchedList.style.display='none';
     strBusqueda = txtSearch.value.replace("#","");
-
+    
     let resultado = await fetch("https://api.giphy.com/v1/gifs/random?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&tag=&rating=G")
     .then(respuesta => respuesta.json())
     .then((dato) => dato);
@@ -171,10 +161,10 @@ async function searchRandom(){
     return resultado;
 }
 async function searchGifos(){
-    fromLinkToInput();
-
     searchedList.style.display='none';
-    strBusqueda = txtSearch.value.replace("#","");
+    strBusqueda = txtSearch.value.replace("#",'');
+
+    console.log(strBusqueda);
 
     let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit="+maxSearchedResult+"&offset=0&rating=G&lang=en")
     .then(respuesta => respuesta.json())
@@ -183,6 +173,8 @@ async function searchGifos(){
     return resultado;
 }
 async function showSearch() {
+    fromLinkToInput();
+
     sectionSearchs[0].hidden = false;
     sectionSuggestions[0].hidden = true;
     sectionTrending[0].hidden=true;
