@@ -14,6 +14,7 @@ let tituloMySearchs=document.getElementById('listSearchs');
 let suggestedList=document.getElementById('dropdown-content1');
 let searchedList=document.getElementById('suggestedList');
 let btnMyGifos=document.getElementById('btn_misGifos');
+let lstSuggested=document.getElementById('lstSuggested');
 
 const maxSuggestedResult=4;
 const maxtrendingResult=24;
@@ -23,6 +24,7 @@ let offset=5;
 let strBusqueda='';
 let limpiarTrending=true;
 
+let imgFrame=document.getElementsByClassName('imgFrame');
 let sectionSearchs=document.getElementsByClassName('searchs');
 let sectionSuggestions=document.getElementsByClassName('suggestions');
 let sectionTrending=document.getElementsByClassName('trending');
@@ -43,6 +45,15 @@ trending();
 
 sectionMySearchs[0].hidden=true;
 
+function listTags(strTags){
+    arrTags=strTags.split('-');
+    
+    lstSuggested.innerHTML='';
+    
+    for(i=0; i < (arrTags.length)-1; i++){
+         lstSuggested.innerHTML+=`<div class="lnkSuggested"><a href="#" onclick="showSearch()" id="${arrTags[i]}">#${arrTags[i]}</a></div> `;
+    }
+}
 function toDayTheme(){
     cssInUse.href='css/dayStyle.css';
 }
@@ -68,9 +79,9 @@ function searhGifOs(){ //dropdown
             searchedList.style.display='block';
 
             suggestedList.innerHTML=`
-                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
-                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
-                    <div class="suggestedItem" id="item1" onclick="fromLinToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
+                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
+                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
+                    <div class="suggestedItem" id="item1" onclick="fromLinkToInput()"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
                 `;
         }else{
             suggestedList.innerHTML=`
@@ -87,30 +98,51 @@ async function suggest() {
       .then(respuesta => respuesta.json())
       .then((dato) => dato);
       
-    img_suggest.innerHTML = ' ';
+    img_suggest.innerHTML = '';
       
     resultado.data.forEach((element, index) => {
     img_suggest.innerHTML +=` 
-                        <div class="imgFrame">
+                        <div class="imgFrame" id="${element['id']}">
                             <div class="imgframeTitle">
                                 <p class="title">${element['title']}</p>
-                                <button class="btn-Close" id="btn-Close"><img src="./assets/close.svg" alt=""></button>
+                                <button class="btn-Close" id="btn-Close"><img data-id="${element['id']}" src="./assets/close.svg" alt=""></button>
                             </div>
-                            <img class="img_daily1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
+                            <img class="img_daily1" alt="loading img" src="${element['images'].downsized_large.url}">
                         </div>
                         `;
     });
+    listTags(resultado.data[0].slug);
 } 
+function eliminar(){
+    let resultado=searchRandom()
+    for(i=0;i<imgFrame.length;i++){
+        if (event.target.dataset.id==imgFrame[i].getAttribute('id')){
+            let hijo=document.getElementById(event.target.dataset.id);
+            img_suggest.removeChild(hijo);
+        }
+    }
+    resultado.then(res =>{
+        img_suggest.innerHTML +=` 
+                                <div class="imgFrame" id="${res.data.id}">
+                                    <div class="imgframeTitle">
+                                        <p class="title">${res.data.itle}</p>
+                                        <button class="btn-Close" id="btn-Close"><img data-id="${res.data.id}" src="./assets/close.svg" alt=""></button>
+                                    </div>
+                                    <img class="img_daily1" alt="loading img" src="${res.data.images.downsized_large.url}">
+                                </div>
+                                `;
+    });
+}
 async function trending() {
     let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&limit="+maxtrendingResult+"&rating=PG-13&offset="+offset+"&lang=en")
         .then(respuesta => respuesta.json())
         .then((dato) => dato);
-      console.log(limpiarTrending);
+      
     if(limpiarTrending){
         img_trending.innerHTML = ' ';
         limpiarTrending=false;
     }
-      console.log(limpiarTrending);
+
     resultado.data.forEach((element, index) => {
         img_trending.innerHTML +=` 
             <div class="frmImgsTrending" id="frmImgsTrending"  onmouseover="yesTitle()" onmouseleave="noTitle()">
@@ -122,14 +154,28 @@ async function trending() {
                  `;
     });
 }
-function fromLinToInput(){
+function fromLinkToInput(){
     txtSearch.value=event.toElement.innerText;
     strBusqueda=txtSearch.value;
 }
-async function searchGifos(){
+async function searchRandom(){
+    fromLinkToInput();
+
     searchedList.style.display='none';
-    strBusqueda = txtSearch.value;
-    
+    strBusqueda = txtSearch.value.replace("#","");
+
+    let resultado = await fetch("https://api.giphy.com/v1/gifs/random?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&tag=&rating=G")
+    .then(respuesta => respuesta.json())
+    .then((dato) => dato);
+
+    return resultado;
+}
+async function searchGifos(){
+    fromLinkToInput();
+
+    searchedList.style.display='none';
+    strBusqueda = txtSearch.value.replace("#","");
+
     let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit="+maxSearchedResult+"&offset=0&rating=G&lang=en")
     .then(respuesta => respuesta.json())
     .then((dato) => dato);
@@ -141,28 +187,26 @@ async function showSearch() {
     sectionSuggestions[0].hidden = true;
     sectionTrending[0].hidden=true;
     sectionMySearchs[0].hidden=false;
-    
-    
 
     let resultado=searchGifos();
 
     resultado.then(res => {
         if (res.data.length!==0){
-            img_mySearchs.innerHTML = ' ';
-            tituloMySearchs.innerText += " "+strBusqueda;
+            img_mySearchs.innerHTML = '';
+            tituloMySearchs.innerText = "Tu Búsqueda: "+strBusqueda;
             res.data.forEach(element => {
             img_mySearchs.innerHTML +=` 
                           <div class="imgFrameSearch">
                               <div class="imgFrameSearchTitle">
                                   <p class="titleSearchs">${element['title']}</p>
                               </div>
-                              <img class="imgSearchs1" id="${element['id']}" alt="loading img" src="${element['images'].downsized_large.url}">
+                              <img class="imgSearchs1" id="${element['id']}" alt="${element['slug']}" src="${element['images'].downsized_large.url}">
                           </div>
                           `;
-            txtSearch.value="";    
+            txtSearch.value='';    
             });
         }else{
-            img_mySearchs.innerHTML = ' ';
+            img_mySearchs.innerHTML = '';
             tituloMySearchs.innerText = " No se encontraron datos para la busqueda: "+strBusqueda;
         }
     });
@@ -180,9 +224,7 @@ function splitSlug(strSlug){
 }
 window.onscroll = function (){
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log("Scroll", scroll);
-
-    if(scroll > maxHeight){
+    if(scroll > 1800){
         trending();
         maxHeight=maxHeight+1700;
         offset=offset+30;

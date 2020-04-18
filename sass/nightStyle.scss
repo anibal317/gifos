@@ -1,7 +1,3 @@
-/*Imports*/
-    //#110038 - Night
-    //#FFF4FD - Day
-/**/
 @import url('https://fonts.googleapis.com/css?family=Chakra+Petch:400,500,600,700&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
@@ -68,7 +64,6 @@ body{
             .btn_headers{
                 position: absolute;
                 margin-top: 2.7%;
-                /*width: 700px;*/
                 left: 700px;
                 .btn_createGifo, .btn_chooseThem, .btn_misGifos, .btn_downArrow, .btn_misGifos, .dropdown-content{
                     background-color: $backgroudColor_btn;
@@ -81,11 +76,16 @@ body{
                     text-align: center;
                     font-size: 16px;
                 }
+                .btn_createGifo:hover{
+                    background: #E6BBE2;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                }
                 .dropdown{
                     position: absolute;
                     left: 260px;
                     width: 165px;
-                    z-index: 3;
+                    z-index: 300;
                    .btn_chooseThem{
                         position: absolute;
                         width: 131px;
@@ -95,6 +95,11 @@ body{
                         width: 36px;                    
                         position: absolute;
                         left: 130px;
+                    }
+                    .btn_downArrow:hover, .btn_chooseThem:hover{
+                        background: #E6BBE2;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
                     }
                     .dropdown-content{
                         margin-top: 35px;
@@ -216,6 +221,7 @@ body{
                     color: #B4B4B4;
                     letter-spacing: 0;
                     line-height: 18px;
+                    z-index: 100;
                     .search-icon{
                         margin-right: 5.7%;
                         color: #B4B4B4;
@@ -225,7 +231,8 @@ body{
             .suggestedList{
                 position: absolute;
                 width: 100%;
-                z-index: 3;            
+                z-index: 3;
+                display: none;            
                 .suggestedList-content{
                     margin-top: 75px;
                     display: none;
@@ -262,7 +269,7 @@ body{
                     padding-top: 0.27%;
                     padding-left: 0.5%;
                     padding-right: 0.5%;
-                    background: #4180F6;
+                    background: #2E32FB;
                     border: 1px solid #4C2F99;
                     box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
                 }
