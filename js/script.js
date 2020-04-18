@@ -29,8 +29,9 @@ let sectionSearchs=document.getElementsByClassName('searchs');
 let sectionSuggestions=document.getElementsByClassName('suggestions');
 let sectionTrending=document.getElementsByClassName('trending');
 let sectionMySearchs=document.getElementsByClassName('mySearchs');
+let sectionMyGuifos=document.getElementsByClassName('myGuifos');
 
-btnMyGifos.addEventListener('click', trending);
+btnMyGifos.addEventListener('click', myGuifos);
 btnThemDay.addEventListener('click', toDayTheme);
 btnThemNight.addEventListener('click', toNightTheme);
 btnChooseThem.addEventListener('click', chooseThem);
@@ -44,6 +45,7 @@ suggest();
 trending();
 
 sectionMySearchs[0].hidden=true;
+sectionMyGuifos[0].hidden=true
 
 function listTags(strTags){
     arrTags=strTags.split('-');
@@ -150,6 +152,13 @@ async function trending() {
 function fromLinkToInput(){
     txtSearch.value = event.toElement.innerText;
     strBusqueda = txtSearch.value;
+}
+function myGuifos(){
+    sectionTrending[0].hidden=true;
+    sectionSearchs[0].hidden = true;
+    sectionSuggestions[0].hidden = true;
+    sectionMySearchs[0].hidden=true;
+    sectionMyGuifos[0].hidden=false
 }
 async function searchRandom(){
     searchedList.style.display='none';
