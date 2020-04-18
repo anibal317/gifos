@@ -380,6 +380,26 @@ body {
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
 
+.container .sub_container .suggestions .img_suggest .imgFrame .btn_verMas {
+  position: absolute;
+  padding-top: 5px;
+  width: 81px;
+  height: 34px;
+  margin-top: -59px;
+  margin-left: 7px;
+  background: #2E32FB;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}
+
 .container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle {
   position: relative;
   height: 24px;

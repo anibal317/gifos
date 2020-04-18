@@ -409,6 +409,7 @@ body {
   letter-spacing: 0;
   text-align: center;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle {

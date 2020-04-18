@@ -100,7 +100,7 @@ async function suggest() {
                                 <button class="btn-Close" id="btn-Close"><img data-id="${element['id']}" src="./assets/close.svg" alt="" onclick="eliminar()"></button>
                             </div>
                             <img class="img_daily1" alt="loading img" src="${element['images'].downsized_large.url}">
-                            <div class="btn_verMas">Ver más...</div>
+                            <div class="btn_verMas"><p onclick="showSearch()">Ver más...</p></div>
                         </div>
                         `;
     });
@@ -165,7 +165,7 @@ async function searchGifos(){
     searchedList.style.display='none';
     strBusqueda = txtSearch.value.replace("#",'');
 
-    console.log(strBusqueda);
+    console.log(strBusqueda,'en busqueda');
 
     let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit="+maxSearchedResult+"&offset=0&rating=G&lang=en")
     .then(respuesta => respuesta.json())
