@@ -650,4 +650,159 @@ body {
   -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
           box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
 }
+
+.container .sub_container .crearMyGuifos .frmPag1, .container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5, .container .sub_container .crearMyGuifos .frmPag6, .container .sub_container .crearMyGuifos .frmPag7 {
+  margin: 0 auto;
+  width: 684px;
+  height: 386px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .pagTitle, .container .sub_container .crearMyGuifos .frmPag2 .pagTitle, .container .sub_container .crearMyGuifos .frmPag3 .pagTitle, .container .sub_container .crearMyGuifos .frmPag4 .pagTitle, .container .sub_container .crearMyGuifos .frmPag5 .pagTitle, .container .sub_container .crearMyGuifos .frmPag6 .pagTitle, .container .sub_container .crearMyGuifos .frmPag7 .pagTitle {
+  padding-left: 7px;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line2, .container .sub_container .crearMyGuifos .frmPag2 .line2, .container .sub_container .crearMyGuifos .frmPag3 .line2, .container .sub_container .crearMyGuifos .frmPag4 .line2, .container .sub_container .crearMyGuifos .frmPag5 .line2, .container .sub_container .crearMyGuifos .frmPag6 .line2, .container .sub_container .crearMyGuifos .frmPag7 .line2 {
+  position: absolute;
+  top: 230px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line2, .container .sub_container .crearMyGuifos .frmPag2 .line2, .container .sub_container .crearMyGuifos .frmPag3 .line2, .container .sub_container .crearMyGuifos .frmPag4 .line2, .container .sub_container .crearMyGuifos .frmPag5 .line2, .container .sub_container .crearMyGuifos .frmPag6 .line2, .container .sub_container .crearMyGuifos .frmPag7 .line2 {
+  position: absolute;
+  top: 230px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line3, .container .sub_container .crearMyGuifos .frmPag2 .line3, .container .sub_container .crearMyGuifos .frmPag3 .line3, .container .sub_container .crearMyGuifos .frmPag4 .line3, .container .sub_container .crearMyGuifos .frmPag5 .line3, .container .sub_container .crearMyGuifos .frmPag6 .line3, .container .sub_container .crearMyGuifos .frmPag7 .line3 {
+  position: absolute;
+  top: 260px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line4, .container .sub_container .crearMyGuifos .frmPag2 .line4, .container .sub_container .crearMyGuifos .frmPag3 .line4, .container .sub_container .crearMyGuifos .frmPag4 .line4, .container .sub_container .crearMyGuifos .frmPag5 .line4, .container .sub_container .crearMyGuifos .frmPag6 .line4, .container .sub_container .crearMyGuifos .frmPag7 .line4 {
+  position: absolute;
+  font-size: 14px;
+  top: 290px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line5, .container .sub_container .crearMyGuifos .frmPag2 .line5, .container .sub_container .crearMyGuifos .frmPag3 .line5, .container .sub_container .crearMyGuifos .frmPag4 .line5, .container .sub_container .crearMyGuifos .frmPag5 .line5, .container .sub_container .crearMyGuifos .frmPag6 .line5, .container .sub_container .crearMyGuifos .frmPag7 .line5 {
+  position: absolute;
+  top: 320px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line6, .container .sub_container .crearMyGuifos .frmPag2 .line6, .container .sub_container .crearMyGuifos .frmPag3 .line6, .container .sub_container .crearMyGuifos .frmPag4 .line6, .container .sub_container .crearMyGuifos .frmPag5 .line6, .container .sub_container .crearMyGuifos .frmPag6 .line6, .container .sub_container .crearMyGuifos .frmPag7 .line6 {
+  position: absolute;
+  font-size: 14px;
+  top: 350px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .imgPage, .container .sub_container .crearMyGuifos .frmPag2 .imgPage, .container .sub_container .crearMyGuifos .frmPag3 .imgPage, .container .sub_container .crearMyGuifos .frmPag4 .imgPage, .container .sub_container .crearMyGuifos .frmPag5 .imgPage, .container .sub_container .crearMyGuifos .frmPag6 .imgPage, .container .sub_container .crearMyGuifos .frmPag7 .imgPage {
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 25px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1, .container .sub_container .crearMyGuifos .frmPag2 .step1, .container .sub_container .crearMyGuifos .frmPag3 .step1, .container .sub_container .crearMyGuifos .frmPag4 .step1, .container .sub_container .crearMyGuifos .frmPag5 .step1, .container .sub_container .crearMyGuifos .frmPag6 .step1, .container .sub_container .crearMyGuifos .frmPag7 .step1 {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 73px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .stepText, .container .sub_container .crearMyGuifos .frmPag2 .stepText, .container .sub_container .crearMyGuifos .frmPag3 .stepText, .container .sub_container .crearMyGuifos .frmPag4 .stepText, .container .sub_container .crearMyGuifos .frmPag5 .stepText, .container .sub_container .crearMyGuifos .frmPag6 .stepText, .container .sub_container .crearMyGuifos .frmPag7 .stepText {
+  margin-top: 25px;
+  margin-left: 73px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag2 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag3 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag4 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag5 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag6 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag7 .step1Buttons {
+  margin-top: 90px;
+  margin-left: 330px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag2 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag3 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag4 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag5 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag6 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag7 .step1Buttons .comenzar {
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .btnBox {
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 15px;
+  width: 144px;
+  height: 36px;
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .textcolor {
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 18px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 {
+  width: 860px;
+  height: 548px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .camera {
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 832px;
+  height: 434px;
+  background-color: #997D97;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons {
+  margin-top: -80px;
+  margin-left: 650px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons .iconCamera {
+  position: absolute;
+  margin-left: 15px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons .capturar {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 50px;
+  width: 144px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .margintop {
+  margin-top: 80px;
+}
 /*# sourceMappingURL=dayStyle.css.map */

@@ -549,6 +549,136 @@ body{
                 }
             }
         }
+        .crearMyGuifos{
+            .frmPag1, .frmPag2, .frmPag3, .frmPag4, .frmPag5, .frmPag6, .frmPag7{
+                margin: 0 auto;
+                width: 684px;
+                height: 386px;
+                background: #E6E6E6;
+                box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+                .pagTitle{
+                    padding-left: 7px;
+                    font-family: $familyType;
+                    font-size: 14px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    font-weight: bold;
+                    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                }
+                
+                .line2{
+                    position: absolute;
+                    top: 230px;
+                    font-size: 14px;
+                }
+                .line2{
+                    position: absolute;
+                    top: 230px;
+                    font-size: 14px;
+                }
+                .line3{
+                    position: absolute;
+                    top: 260px;
+                    font-size: 14px;
+                }
+                .line4{
+                    position: absolute;
+                    font-size: 14px;
+                    top: 290px;
+                }
+                .line5{
+                    position: absolute;
+                    top: 320px;
+                    font-size: 14px;
+                }
+                .line6{
+                    position: absolute;
+                    font-size: 14px;
+                    top: 350px;
+                }
+                .imgPage{
+                    position: absolute;
+                    margin-top: 27px;
+                    margin-left: 25px
+                }
+                .step1{
+                    font-weight: bold;
+                    margin-top: 25px;
+                    margin-left: 73px;
+                }
+                .stepText{
+                    margin-top: 25px;
+                    margin-left: 73px;
+                }
+                .step1Buttons{
+                    margin-top: 90px;
+                    margin-left: 330px;
+                    .comenzar{
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    }
+                }
+            }
+            .btnBox{
+                cursor: pointer;
+                margin-top: 100px;
+                margin-left: 15px;
+                width: 144px;
+                height: 36px;
+                background: #FFF4FD;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                text-align: center;
+            }
+            .textcolor{
+                font-family: $familyType;
+                font-size: 16px;
+                color: #110038;
+                letter-spacing: 0;
+                text-align: left;
+                line-height: 18px;
+            }
+            .frmPag2{
+                width: 860px;
+                height: 548px;
+                .camera{
+                    margin-top: 11px;
+                    margin-left: 11px;
+                    width: 832px;
+                    height: 434px;
+                    background-color: #997D97;
+                }
+                .step2Buttons{
+                    margin-top: -80px;
+                    margin-left: 650px;
+                    .iconCamera{
+                        position: absolute;
+                        margin-left: 15px;
+                        text-align: center;
+                        width: 36px;
+                        height: 36px;
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                        cursor: pointer;
+                    }
+                    .capturar{
+                        position: absolute;
+                        text-align: center;
+                        cursor: pointer;
+                        margin-left: 50px;
+                        width: 144px;
+                        height: 36px;
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    }
+                }
+            }
+        }
+        .margintop{
+            margin-top: 80px;
+        }
     }
 }
-

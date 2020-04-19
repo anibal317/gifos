@@ -45,7 +45,7 @@ suggest();
 trending();
 
 sectionMySearchs[0].hidden=true;
-sectionMyGuifos[0].hidden=true
+sectionMyGuifos[0].hidden=true;
 
 function listTags(strTags){
     arrTags=strTags.split('-');
