@@ -649,16 +649,16 @@ body{
                 text-align: left;
                 line-height: 18px;
             }
+            .camera{
+                margin-top: 11px;
+                margin-left: 11px;
+                width: 832px;
+                height: 434px;
+                background-color: #997D97;
+            }
             .frmPag2, .frmPag3, .frmPag4, .frmPag5{
                 width: 860px;
                 height: 548px;
-                .camera{
-                    margin-top: 11px;
-                    margin-left: 11px;
-                    width: 832px;
-                    height: 434px;
-                    background-color: #997D97;
-                }
                 .step2Buttons{
                     margin-top: -80px;
                     margin-left: 650px;
@@ -753,7 +753,35 @@ body{
                 margin-left: 193px;
                 width: 24px;
                 height: 24px;
-
+            }
+            .cancelarSubida{
+                position: absolute;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 500px;
+            }
+            .imgLoading{
+                position: absolute;
+                margin-top: 174px;
+                margin-left: 406px;
+            }
+            .loadingGif{
+                position: absolute;
+                margin-top: 291px;
+                margin-left: 265px;
+                width: 324px;
+                height: 24px;
+            }
+            .step5SubTitle{
+                position: absolute;
+                margin-top: 323px;
+                margin-left: 310.5px;
+                font-size: 12px;
+            }
+            .step5Title{
+                position: absolute;
+                margin-top: 230px;
+                margin-left: 322px;
             }
         }
         .margintop{

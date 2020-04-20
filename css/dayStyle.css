@@ -771,17 +771,17 @@ body {
   line-height: 18px;
 }
 
-.container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5 {
-  width: 860px;
-  height: 548px;
-}
-
-.container .sub_container .crearMyGuifos .frmPag2 .camera, .container .sub_container .crearMyGuifos .frmPag3 .camera, .container .sub_container .crearMyGuifos .frmPag4 .camera, .container .sub_container .crearMyGuifos .frmPag5 .camera {
+.container .sub_container .crearMyGuifos .camera {
   margin-top: 11px;
   margin-left: 11px;
   width: 832px;
   height: 434px;
   background-color: #997D97;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5 {
+  width: 860px;
+  height: 548px;
 }
 
 .container .sub_container .crearMyGuifos .frmPag2 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag3 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag4 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag5 .step2Buttons {
@@ -893,6 +893,40 @@ body {
   margin-left: 193px;
   width: 24px;
   height: 24px;
+}
+
+.container .sub_container .crearMyGuifos .cancelarSubida {
+  position: absolute;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.container .sub_container .crearMyGuifos .imgLoading {
+  position: absolute;
+  margin-top: 174px;
+  margin-left: 406px;
+}
+
+.container .sub_container .crearMyGuifos .loadingGif {
+  position: absolute;
+  margin-top: 291px;
+  margin-left: 265px;
+  width: 324px;
+  height: 24px;
+}
+
+.container .sub_container .crearMyGuifos .step5SubTitle {
+  position: absolute;
+  margin-top: 323px;
+  margin-left: 310.5px;
+  font-size: 12px;
+}
+
+.container .sub_container .crearMyGuifos .step5Title {
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 322px;
 }
 
 .container .sub_container .margintop {
