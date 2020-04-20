@@ -367,6 +367,7 @@ body{
                             height: 14px;
                             position: absolute;
                             right: 1px;
+                            background-color: transparent;
                         }
                     }
                 }
@@ -564,8 +565,13 @@ body{
                     letter-spacing: 0;
                     font-weight: bold;
                     background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+                    .btnClose{
+                        top: 125px;
+                        left: 1080px;
+                        position: absolute;
+                        background-color: transparent;
+                    }
                 }
-                
                 .line2{
                     position: absolute;
                     top: 230px;
@@ -614,9 +620,13 @@ body{
                     margin-top: 90px;
                     margin-left: 330px;
                     .comenzar{
+                        text-align: center;
                         background: #F7C9F3;
                         border: 1px solid #110038;
                         box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    }
+                    .cancelar {
+                        text-align: center;
                     }
                 }
             }
@@ -639,7 +649,7 @@ body{
                 text-align: left;
                 line-height: 18px;
             }
-            .frmPag2{
+            .frmPag2, .frmPag3, .frmPag4{
                 width: 860px;
                 height: 548px;
                 .camera{
@@ -676,9 +686,55 @@ body{
                     }
                 }
             }
+            .step3Buttons{
+                .listo, .recording, .timer {
+                    position: absolute;
+                    top: 510px;
+                    left: 930px;
+                    color:white;
+                    background: #FF6161;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                    text-align: center;
+                }
+                .recording{
+                    left: 895px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .timer{
+                    font-family: $familyType;
+                    font-size: 16px;
+                    color: #110038;
+                    letter-spacing: 0;
+                    line-height: 22px;  
+                    left: 240px;
+                    background: #FFFFFF;
+                    border: 1px solid #979797;
+                    box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+                    width: 124px;
+                    height: 36px;
+                }
+            }
+            .frmPag4{
+                .step4Buttons{
+                    .subirGuifo{
+                        text-align: center;
+                        background: #F7C9F3;
+                        border: 1px solid #110038;
+                        box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    }
+                    .repetirCaptura{
+                        position: absolute;
+                        margin-top: 0;
+                        text-align: center;
+                        background-color: red;
+                    }
+                }
+            }
         }
         .margintop{
             margin-top: 80px;
         }
-    }
+    } 
 }
