@@ -31,8 +31,8 @@ pag1[0].hidden=true;
 pag2[0].hidden=true;
 pag3[0].hidden=true;
 pag4[0].hidden=true;
-pag5[0].hidden=false;
-pag6[0].hidden=true;
+pag5[0].hidden=true;
+pag6[0].hidden=false;
 timer[0].hidden=true;
 
 
@@ -54,5 +54,9 @@ function pagina5(){
     pag4[0].hidden=true;
     timer[0].hidden=true;
     pag5[0].hidden=false;
-
+}
+function pagina6(){
+    pag5[0].hidden=true;
+    timer[0].hidden=true;
+    pag6[0].hidden=false;
 }

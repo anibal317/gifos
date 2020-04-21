@@ -226,7 +226,8 @@ function splitSlug(strSlug){
 }
 window.onscroll = function (){
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    if(scroll > 1800){
+    console.log(scroll);
+    if(scroll > maxHeight){
         trending();
         maxHeight=maxHeight+1700;
         offset=offset+30;

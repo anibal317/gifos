@@ -757,8 +757,8 @@ body{
             .cancelarSubida{
                 position: absolute;
                 text-align: center;
-                margin-top: 80px;
-                margin-left: 500px;
+                margin-top: 20px;
+                margin-left: 700px;
             }
             .imgLoading{
                 position: absolute;
@@ -778,10 +778,51 @@ body{
                 margin-left: 310.5px;
                 font-size: 12px;
             }
-            .step5Title{
+            .step5Title, .step6Title{
                 position: absolute;
                 margin-top: 230px;
                 margin-left: 322px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .step6buttons{
+                .bntCopyLink{
+                    position: absolute;
+                    margin-top: 150px;
+                    margin-left: 419px;
+                    text-align: center;
+                    z-index: 1000;
+                    width: 256px;
+                }
+                .ready{
+                    margin-top: 180px;
+                    margin-left: 480px;
+                    background: #F7C9F3;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                    text-align: center;
+                }
+                .btnDownloadGif{
+                    width: 256px;
+                    margin-top: 100px;
+                    margin-left: 419px;
+                    text-align: center;
+                }
+            }
+            .step6Title{
+                margin-top: 49px;
+                margin-left: 419px;
+                text-align: center;
+            }
+            .gifoView{
+                width: 356px;
+                height: 191px;
+                margin-top: 29px;
+                margin-left: 24px;
+                position: absolute;
+                background: #FFFFFF;
+                border: 1px solid #979797;
+                box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
             }
         }
         .margintop{
