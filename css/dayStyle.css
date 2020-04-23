@@ -779,6 +779,12 @@ body {
   background-color: #997D97;
 }
 
+.container .sub_container .crearMyGuifos .camera .vCamera {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
 .container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5 {
   width: 860px;
   height: 548px;

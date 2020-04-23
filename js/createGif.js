@@ -27,12 +27,12 @@ btnDropdown[0].hidden=true;
 btnMisGifos[0].hidden=true;
 sectionMisGifos[0].hidden=false;
 
-pag1[0].hidden=true;
+pag1[0].hidden=false;
 pag2[0].hidden=true;
 pag3[0].hidden=true;
 pag4[0].hidden=true;
 pag5[0].hidden=true;
-pag6[0].hidden=false;
+pag6[0].hidden=true;
 timer[0].hidden=true;
 
 
@@ -60,3 +60,35 @@ function pagina6(){
     timer[0].hidden=true;
     pag6[0].hidden=false;
 }
+
+async function getStreamAndRecord (){
+
+    await navigator.mediaDevices.getUserMedia({ 
+        audio: false, 
+        video: { width: 1278, height: 673 } 
+}).then(function(stream) { 
+    let video = document.getElementById("vCamera");
+    video.srcObject = stream;  
+    video.play(); 
+});
+}
+
+// function stopPlayer() {
+//     var mediaPlayer;
+
+//     mediaPlayer = document.getElementById('vCamera');
+//     mediaPlayer.controls = false;   
+
+//     mediaPlayer.pause();
+//     mediaPlayer.currentTime = 0;
+
+//     if ( mediaPlayer.pause == true ) {
+//         $('.pause-btn').hide();
+//         $('.play-btn').show();
+//     }
+
+// }
+
+getStreamAndRecord();
+
+stopPlayer()
