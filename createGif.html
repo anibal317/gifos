@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="step1Buttons textcolor">
-                                <button class="btnBox cancelar textcolor" id="btnCancelar">Cancelar</button>
+                                <button class="btnBox cancelar textcolor" id="btnCancelar"  onclick="window.location.href='index.html'">Cancelar</button>
                                 <button class="btnBox comenzar textcolor" id="btnComenzar">Comenzar</button>
                             </div>
                         </div>
@@ -71,7 +71,6 @@
                                 <button class="btnClose" id="btnClose0"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <!-- <device type="media"></device> -->
                                 <video src="" class="vCamera" autoplay id="vCamera"></video>
                             </div>
                             <div class="step2Buttons textcolor">
@@ -85,21 +84,21 @@
                                 <button class="btnClose" id="btnClose"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <video src="#" class="vCamera"></video>
+                                <video src="" class="vCamera" id="vCamera1" autoplay></video>
                             </div>
                             <div class="step3Buttons textcolor">
                                 <button class="btnBox textcolor recording" id="btnRecording"><img src="./assets/recording.svg" alt=""></button>
                                 <button class="btnBox textcolor listo" id="btnListo">Listo</button>
                             </div>
                         </div>
-                        <button class="btnBox timer">00:00:03:06</button>
+                        <button class="btnBox timer">00:00:00:00</button>
                         <div class="frmPag4">
                             <div class="pagTitle">
                                 <p>Vista Previa</p>
                                 <button class="btnClose" id="btnClose1"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <video src="#" class="vCamera"></video>
+                                <img src="#" class="preView" id="preView">
                             </div>
                             <div class="step4uttons textcolor">
                                 <progress class="progess" max="10" value="5"></progress>
@@ -113,7 +112,7 @@
                             <img src="./assets/globe_img.png" class="imgLoading" alt="">
                             <div class="textcolor step5Title" style="font-size: 16px; font-weight: bold;">Estamos subiendo tu guifo…</div>
                             <progress class="loadingGif"></progress>
-                            <div class="textcolor step5SubTitle">Tiempo restante: <span style="color: rgba(17,0,56,0.64); text-decoration: line-through;">38 años</span> algunos minutos</div>
+                            <div class="textcolor step5SubTitle" id="span">Tiempo restante: <span style="color: rgba(17,0,56,0.64); text-decoration: line-through;" >38 años</span> algunos minutos</div>
                             <div class="camera"></div>
                             <div class="step5buttons textcolor">
                                 <button class="btnBox textcolor cancelarSubida" id="btnCancelarSubida">Cancelar</button>
@@ -162,6 +161,7 @@
                 </div>
             </div>
         </div>
-            <script src="./js/createGif.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script> 
+        <script src="./js/createGif.js"></script>
     </body>
 </html>

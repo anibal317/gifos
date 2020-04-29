@@ -834,6 +834,7 @@ body {
 }
 
 .container .sub_container .crearMyGuifos .timer {
+  cursor: default;
   position: absolute;
   top: 510px;
   left: 930px;
@@ -906,6 +907,12 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-left: 700px;
+}
+
+.container .sub_container .crearMyGuifos .preView {
+  background-color: red;
+  width: 100%;
+  height: 100%;
 }
 
 .container .sub_container .crearMyGuifos .imgLoading {

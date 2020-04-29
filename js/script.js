@@ -51,7 +51,7 @@ function listTags(strTags){
     arrTags=strTags.split('-');
     lstSuggested.innerHTML='';
     for(i=0; i < (arrTags.length)-1; i++){
-         lstSuggested.innerHTML+=`<div class="lnkSuggested"><a href="#" onclick="showSearch()" id="${arrTags[i]}">#${arrTags[i]}</a></div> `;
+         lstSuggested.innerHTML+=`<div class="lnkSuggested"><a href="#" onclick="fromLinkToInput()" id="${arrTags[i]}">#${arrTags[i]}</a></div> `;
     }
 }
 function toDayTheme(){
@@ -77,9 +77,9 @@ function searhGifOs(){ //dropdown
         if(res.data.length!==0){
             searchedList.style.display='block';
             suggestedList.innerHTML=`
-                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
-                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
-                    <div class="suggestedItem" id="item1"><a href="#" onclick="showSearch()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="fromLinkToInput()" class="lnk" id="${res.data[0].id}">${res.data[0].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="fromLinkToInput()" class="lnk" id="${res.data[1].id}">${res.data[1].title}</a></div>
+                    <div class="suggestedItem" id="item1"><a href="#" onclick="fromLinkToInput()" class="lnk" id="${res.data[2].id}">${res.data[2].title}</a></div>
                 `;
         }
     });
@@ -99,10 +99,10 @@ async function suggest() {
                         <div class="imgFrame" id="${element['id']}">
                             <div class="imgframeTitle">
                                 <p class="title">${element['title']}</p>
-                                <button class="btn-Close" id="btn-Close"><img data-id="${element['id']}" src="./assets/close.svg" alt="" onclick="eliminar()"></button>
+                                <button class="btn-Close" id="btn-Close" ><img data-id="${element['id']}" src="./assets/close.svg" alt="" onclick="eliminar()"></button>
                             </div>
                             <img class="img_daily1" alt="loading img" src="${element['images'].downsized_large.url}">
-                            <div class="btn_verMas"><p onclick="showSearch()">Ver más...</p></div>
+                            <div class="btn_verMas" ><p data-more="${element['title']}" onclick="showMore()">Ver más...</p></div>
                         </div>
                         `;
     });
@@ -124,6 +124,7 @@ function eliminar(){
                                         <button class="btn-Close" id="btn-Close"><img data-id="${res.data.id}" src="./assets/close.svg" alt=""></button>
                                     </div>
                                     <img class="img_daily1" alt="loading img" src="${res.data.images.downsized_large.url}">
+                                    <div class="btn_verMas" ><p data-more="${res.data.title}" onclick="showMore()">Ver más...</p></div>
                                 </div>
                                 `;
     });
@@ -152,6 +153,7 @@ async function trending() {
 function fromLinkToInput(){
     txtSearch.value = event.toElement.innerText;
     strBusqueda = txtSearch.value;
+    showSearch();
 }
 function myGuifos(){
     sectionTrending[0].hidden=true;
@@ -182,8 +184,12 @@ async function searchGifos(){
 
     return resultado;
 }
+function showMore(){
+    txtSearch.value=event.target.dataset.more;
+    showSearch();
+}
 async function showSearch() {
-    fromLinkToInput();
+    console.log(txtSearch," ==> En la función showSearch")
 
     sectionSearchs[0].hidden = false;
     sectionSuggestions[0].hidden = true;
@@ -226,7 +232,6 @@ function splitSlug(strSlug){
 }
 window.onscroll = function (){
     var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log(scroll);
     if(scroll > maxHeight){
         trending();
         maxHeight=maxHeight+1700;
