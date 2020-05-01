@@ -102,7 +102,7 @@ async function suggest() {
                                 <button class="btn-Close" id="btn-Close" ><img data-id="${element['id']}" src="./assets/close.svg" alt="" onclick="eliminar()"></button>
                             </div>
                             <img class="img_daily1" alt="loading img" src="${element['images'].downsized_large.url}">
-                            <div class="btn_verMas" ><p data-more="${element['title']}" onclick="showMore()">Ver más...</p></div>
+                            <div class="btn_verMas" ><p data-more="${element['slug'].split('-')[0]}" onclick="showMore()">Ver más...</p></div>
                         </div>
                         `;
     });
