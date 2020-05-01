@@ -17,8 +17,8 @@
             <div class="sub_container">
                 <div class="nav">
                     <nav class="header">
-                        <div class="frameLogo logoBeofre">
-                            <a href="index.html"><img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.os"></a>
+                        <div class="frameLogo">
+                            <a href="index.html" class="logo_arrow"><img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.os"></a>
                         </div>
                         <div class="btn_headers">
                             <button class="btn_createGifo">Crear Guifos</button>
@@ -71,7 +71,7 @@
                                 <button class="btnClose" id="btnClose0"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <video src="" class="vCamera" autoplay id="vCamera"></video>
+                                <video src="#" class="vCamera" autoplay id="vCamera"></video>
                             </div>
                             <div class="step2Buttons textcolor">
                                 <button class="btnBox textcolor iconCamera" id="btnIconCamera"><img src="./assets/camera.svg" alt=""></button>
@@ -84,7 +84,7 @@
                                 <button class="btnClose" id="btnClose"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <video src="" class="vCamera" id="vCamera1" autoplay></video>
+                                <video src="#" class="vCamera" id="vCamera1" autoplay></video>
                             </div>
                             <div class="step3Buttons textcolor">
                                 <button class="btnBox textcolor recording" id="btnRecording"><img src="./assets/recording.svg" alt=""></button>
@@ -98,7 +98,7 @@
                                 <button class="btnClose" id="btnClose1"><img src="./assets/close.svg" alt=""></button>
                             </div>
                             <div class="camera">
-                                <img src="#" class="preView" id="preView">
+                                <img src="#" class="preView" id="preView" alt="preview">
                             </div>
                             <div class="step4uttons textcolor">
                                 <progress class="progess" max="10" value="5"></progress>
@@ -113,18 +113,24 @@
                             <div class="textcolor step5Title" style="font-size: 16px; font-weight: bold;">Estamos subiendo tu guifo…</div>
                             <progress class="loadingGif"></progress>
                             <div class="textcolor step5SubTitle" id="span">Tiempo restante: <span style="color: rgba(17,0,56,0.64); text-decoration: line-through;" >38 años</span> algunos minutos</div>
+                            <!-- <div class="textcolor step5SubTitle reminderTimer" id="reminderTime">Last time: </div> -->
                             <div class="camera"></div>
                             <div class="step5buttons textcolor">
+                                <div class="tags" id="tags">Agregar los tags de búsqueda seoarados por coma: </div><input class="txtTags" id="txtTags" type="text"> 
                                 <button class="btnBox textcolor cancelarSubida" id="btnCancelarSubida">Cancelar</button>
                             </div>
                         </div>
                         <div class="frmPag6">
                             <div class="pagTitle">Guifo Subido Con Éxito</div>
                             <div class="textcolor step6Title">Guifo creado con éxito</div>
-                            <div class="gifoView"></div>
+                            <div class="gifoView">
+                                <img src="#" alt="" class="finalGif">
+                                <input type="text" name="txtfinalUrl" id="txtfinalUrl" class="txtTags txtfinalUrl" readonly value="">
+                            </div>
                             <div class="step6buttons textcolor">
                                 <button class="btnBox textcolor bntCopyLink" id="bntCopyLink">Copiar Enlace Guifo</button>
                                 <button class="btnBox textcolor btnDownloadGif" id="btnDownloadGif">Descargar Guifo</button>
+                                <div class="message" id="message"></div>
                                 <button class="btnBox textcolor ready" id="btnReady">Listo</button>
                             </div>
                         </div>
@@ -160,8 +166,9 @@
                     </div> 
                 </div>
             </div>
+            
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"></script> 
         <script src="./js/createGif.js"></script>
     </body>
 </html>

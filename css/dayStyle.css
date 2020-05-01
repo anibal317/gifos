@@ -210,6 +210,14 @@ body {
   content: url("/assets/gifOF_logo.png");
 }
 
+.container .sub_container .header .frameLogo .logo_arrow::before {
+  content: url("/assets/arrow.svg");
+  position: absolute;
+  font-size: 30px;
+  top: 50px;
+  left: -26px;
+}
+
 .container .sub_container .searchs {
   position: relative;
   width: auto;
@@ -685,12 +693,6 @@ body {
   font-size: 14px;
 }
 
-.container .sub_container .crearMyGuifos .frmPag1 .line2, .container .sub_container .crearMyGuifos .frmPag2 .line2, .container .sub_container .crearMyGuifos .frmPag3 .line2, .container .sub_container .crearMyGuifos .frmPag4 .line2, .container .sub_container .crearMyGuifos .frmPag5 .line2, .container .sub_container .crearMyGuifos .frmPag6 .line2, .container .sub_container .crearMyGuifos .frmPag7 .line2 {
-  position: absolute;
-  top: 230px;
-  font-size: 14px;
-}
-
 .container .sub_container .crearMyGuifos .frmPag1 .line3, .container .sub_container .crearMyGuifos .frmPag2 .line3, .container .sub_container .crearMyGuifos .frmPag3 .line3, .container .sub_container .crearMyGuifos .frmPag4 .line3, .container .sub_container .crearMyGuifos .frmPag5 .line3, .container .sub_container .crearMyGuifos .frmPag6 .line3, .container .sub_container .crearMyGuifos .frmPag7 .line3 {
   position: absolute;
   top: 260px;
@@ -970,10 +972,51 @@ body {
   text-align: center;
 }
 
+.container .sub_container .crearMyGuifos .tags {
+  position: absolute;
+  width: 500px;
+  height: 24px;
+  top: 620px;
+  left: 300px;
+  color: black;
+}
+
+.container .sub_container .crearMyGuifos .txtTags {
+  position: absolute;
+  width: 200px;
+  height: 26px;
+  top: 615px;
+  left: 680px;
+  z-index: 200;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding-left: 2px;
+}
+
 .container .sub_container .crearMyGuifos .step6Title {
   margin-top: 49px;
   margin-left: 419px;
   text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .txtfinalUrl {
+  top: 195px;
+  background-color: white;
+  width: 355px;
+  left: 0px;
+  color: black;
+  padding-left: 2px;
+}
+
+.container .sub_container .crearMyGuifos .message {
+  position: absolute;
+  color: black;
+  top: 335px;
+  left: 751px;
+  width: 255px;
+  height: 26px;
+  padding-left: 2px;
 }
 
 .container .sub_container .crearMyGuifos .gifoView {
