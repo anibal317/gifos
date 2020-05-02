@@ -1,3 +1,6 @@
+arrMyGifos=JSON.parse(localStorage.getItem('myGifos')) || ["KZ5hI3mCLfwkUW4ANq","QsmzMduo77TUJR9WWn","ZDFA2y53aJg0pX0sgL", "Y4bA1xg5FZeZaY641X", "kfoYPgUrmsQS2xj71C", "jOzQBRIp3R45FXDw2F"];
+let gifoUrl="https://giphy.com/embed/";
+
 let cssInUse=document.getElementById('lnkStyleSheet');
 let btnThemDay=document.getElementById('themDay');
 let btnThemNight=document.getElementById('themNight');
@@ -236,3 +239,15 @@ window.onscroll = function (){
         offset=offset+30;
     }
 }
+
+function insertMyGifos(){
+    myGuifosFrame.innerHTML='';
+    arrMyGifos.forEach(element =>{
+        myGuifosFrame.innerHTML +=` 
+                            <div class="gifs">
+                                <iframe class="imgMyGuifos1" id="imgSearchs01" alt="loading img" src="${gifoUrl+element}"></iframe>
+                            div>
+                          `;
+    });
+}
+insertMyGifos();
