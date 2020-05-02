@@ -1019,6 +1019,20 @@ body {
   padding-left: 2px;
 }
 
+.container .sub_container .crearMyGuifos .finalGif {
+  width: 350px;
+  height: 184px;
+  left: 2px;
+  top: 2px;
+  background-color: red;
+  z-index: 100;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
 .container .sub_container .crearMyGuifos .gifoView {
   width: 356px;
   height: 191px;

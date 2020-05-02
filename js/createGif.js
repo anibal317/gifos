@@ -28,6 +28,7 @@ let btnReady=document.getElementById('btnReady');
 let tags=document.getElementById('tags');
 let txtTags=document.getElementById('txtTags');
 let txtfinalUrl=document.getElementById('txtfinalUrl');
+let finalGif=document.getElementById('finalGif');
 let message=document.getElementById('message');
 
 let sectionMisGifos=document.getElementsByClassName('myGuifos');
@@ -69,7 +70,6 @@ function pagina2(){
     pag2[0].hidden=false;
     sectionMisGifos[0].hidden=true;
     getStreamAndRecord(video);
-
 }
 //btnCapturar
 function pagina3(){
@@ -115,7 +115,7 @@ function pagina3(){
             width: 360,
             hidden: 240,
             onGifRecordingStarted: function() { 
-             console.log('started')
+             console.log('started');
            },
           }); 
           recorder.startRecording(); //comienza la grabación automáticamente
@@ -151,7 +151,7 @@ function pagina4(){
           form.append('file', gifDone, 'myGif.gif'); //arma el archivo q luego se envia al request POST
         })
     }
-    console.log(URL.createObjectURL(form.get('file')));
+    strTags=
     preViewGifo.src=URL.createObjectURL(form.get('file'));
 }
 //btnSubirGuifo
@@ -166,15 +166,13 @@ function pagina5(){
         if(a==99){
             a=0;
             b++;
-            if(b==3){
+            if(b==5){
                 b=0;
                 clearInterval(time);
                 btnCancelarSubida.disabled=true;
                 txtTags.disable=true;
                 strTags=txtTags.value;
-                //Colocar metodo post a giphy
                 postGif();
-                pagina6();
             }
         }   
         a++;
@@ -197,31 +195,34 @@ function getStreamAndRecord (media) {
        return media.play() ;
    })
  }
-function postGif(){
+async function postGif(){
     var formdata = new FormData();
-
     formdata.append("api_key", "M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O");
     formdata.append("username", "jorgeanibalsardon");
     formdata.append("file", form.get('file')/*"https://gifsanimados.de/img-gifsanimados.de/l/los-simpson/los-simpson-lluvia.gif"*/);
-    formdata.append(strTags);
+    formdata.append("tags",strTags);
     var requestOptions = {
         method: 'POST',
         body: formdata,
         redirect: 'follow'
     };
-    fetch("https://upload.giphy.com/v1/gifs", requestOptions)
-    .then(response => response.text())
-    .then(result => addToMyGifosLsit(result.data.id))
-    .catch(error => console.log('error', error));
+    await fetch("https://upload.giphy.com/v1/gifs", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+        addToMyGifosLsit(result.data['id']);
+        console.log(arrMyGifos);
+        txtfinalUrl.value=gifoUrl+result.data['id'];
+        finalGif.src=URL.createObjectURL(form.get('file'));
+    })
+    .catch(error => console.log('Error del cathc de la función POST: ', error));
+    pagina6();
 }
 function addToMyGifosLsit(id){
-    objeto.push(id);
-    console.table(objeto);
-    localStorage.setItem("myGifos", JSON.stringify(objeto));
-    console.table(JSON.parse(guardado));
+    arrMyGifos.push(id);
+    localStorage.setItem("myGifos", JSON.stringify(arrMyGifos));
 }
 function downlaodGif(){
-    txtfinalUrl.value=gifoUrl+"-552da5rraAST$69";
+    invokeSaveAsDialog(form.get('file'));
 }
 function toMygifos(){
     window.location.href='index.html';
@@ -236,5 +237,6 @@ function copylink(){
             message.innerText="El link fue copiado con éxito";
         }
     } catch (err) {
+        console.log(err);
     }
 }

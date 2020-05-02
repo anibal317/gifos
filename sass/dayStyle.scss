@@ -865,7 +865,18 @@ body{
                 height: 26px;
                 padding-left: 2px;
             }
-            .gifoView{
+            .finalGif{
+                width: 350px;
+                height: 184px;
+                left: 2px;
+                top: 2px;
+                background-color: red;
+                z-index: 100;
+                position: absolute;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .gifoView {
                 width: 356px;
                 height: 191px;
                 margin-top: 29px;
