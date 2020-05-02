@@ -83,9 +83,9 @@ function searhGifOs(){ //dropdown
                 `;
         }
     });
-        if(strBusqueda===''){
-            searchedList.style.display='none';
-        }
+    if (event.keyCode==13){
+        showSearch();
+    }
 }
 async function suggest() {
     let resultado = await fetch("https://api.giphy.com/v1/gifs/trending?api_key=NzreMCTPOd9ZcGAzVKXEkG2zPoJnL0bW&limit="+maxSuggestedResult+"&rating=G&lang=es")
@@ -107,6 +107,7 @@ async function suggest() {
                         `;
     });
     listTags(resultado.data[0].slug);
+    searchedList.style.display='none';
 } 
 function eliminar(){
     let resultado=searchRandom()
@@ -154,6 +155,7 @@ function fromLinkToInput(){
     txtSearch.value = event.toElement.innerText;
     strBusqueda = txtSearch.value;
     showSearch();
+    searchedList.style.display='none';
 }
 function myGuifos(){
     sectionTrending[0].hidden=true;
@@ -173,23 +175,19 @@ async function searchRandom(){
     return resultado;
 }
 async function searchGifos(){
-    searchedList.style.display='none';
     strBusqueda = txtSearch.value.replace("#",'');
-
-    console.log(strBusqueda,'en busqueda');
 
     let resultado = await fetch("https://api.giphy.com/v1/gifs/search?api_key=M2w3WvZMLnWs5ra5f7CsLTKJEwaGWD1O&q="+strBusqueda+"&limit="+maxSearchedResult+"&offset=0&rating=G&lang=en")
     .then(respuesta => respuesta.json())
-    .then((dato) => dato);
-
+    .then((dato) => dato);    
     return resultado;
+
 }
 function showMore(){
     txtSearch.value=event.target.dataset.more;
     showSearch();
 }
 async function showSearch() {
-    console.log(txtSearch," ==> En la función showSearch")
 
     sectionSearchs[0].hidden = false;
     sectionSuggestions[0].hidden = true;
@@ -211,7 +209,7 @@ async function showSearch() {
                               <img class="imgSearchs1" id="${element['id']}" alt="${element['slug']}" src="${element['images'].downsized_large.url}">
                           </div>
                           `;
-            txtSearch.value='';    
+            txtSearch.value='';                
             });
         }else{
             img_mySearchs.innerHTML = '';
