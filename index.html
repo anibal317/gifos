@@ -1,34 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/dayStyle.css" id="lnkStyleSheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>¡Bienvenidos/as a Guifos.com!</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/myStyles.css">
-    <title>Document</title>
-</head>
+    <body>
+        <div class="container" id="container">
+            <div class="box_title">
+                <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+            <div class="sub_container">
+                <div class="nav">
+                    <nav class="header">
+                        <div class="frameLogo">
+                            <a href="index.html"><img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.os"></a>
+                        </div>
+                        <div class="btn_headers">
+                            <button class="btn_createGifo" onclick="window.location.href='createGif.html'">Crear Guifos</button>
+                            <div class="dropdown">
+                                <button class="btn_pos btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
+                                <button class="btn_pos btn_downArrow" id="btn_downArrow"><img src="./assets/dropdown.svg" alt="dropdown arrow"></button>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <div class="linkThem dayBox" id="dayBox"><a href="#" id="themDay">Saylor Day</a></div>
+                                    <div class="linkThem nightBox" id="nightBox"><a href="#" id="themNight">Saylor Night</a></div>
+                                </div>
+                            </div>
+                            <button class="btn_misGifos" id="btn_misGifos"> <span class="myGifOsSpan">M</span>is
+                                Guifos</button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="searchs">
+                    <div class="search_title">Buscar</div>
+                    <div class="search">
+                        <input type="text" class="txtSearch" id="txtSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                        <button class="btn_search" id="btn_search"><i class="fas fa-search search-icon"></i>Buscar</button>
+                    </div>
+                    <div class="suggestedList" id="suggestedList">
+                        <div class="suggestedList-content" id="dropdown-content1">
+                            <div class="suggestedItem" id="item1"><a href="#" class="lnk" id="lnk1">Resultado de búsqueda sugerido</a></div>
+                            <div class="suggestedItem" id="item2"><a href="#" class="lnk" id="lnk2">Un resultado similar de búsqueda</a></div>
+                            <div class="suggestedItem" id="item3"><a href="#" class="lnk" id="lnk3">Y otro más</a></div>
+                        </div>
+                    </div>
+                    <div class="lstSuggested" id="lstSuggested">
+                        <div class="lnkSuggested" id="lnkSuggested1">#link 1</div>
+                        <div class="lnkSuggested" id="lnkSuggested2">#link 2</div>
+                        <div class="lnkSuggested" id="lnkSuggested3">#link 3</div>
+                        <div class="lnkSuggested" id="lnkSuggested4">#link 4</div>
+                    </div>
+                </div>
+                <div class="suggestions">
+                    <div class="daily_suggest">Hoy te sugerimos:</div>
+                    <div class="img_suggest" id="img_suggest">
+                        <div class="imgFrame">
+                            <div class="imgframeTitle">
+                                <p class="title">#Titulo 1</p>
+                                <button class="btn-Close" id="btn-Close"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <img class="img_daily" id="img_daily1" alt="loading img" src="#">
+                            <div class="btn_verMas">Ver más...</div>
+                        </div>
+                        <div class="imgFrame">
+                            <div class="imgframeTitle">
+                                <p class="title">#Titulo 2</p>
+                                <button class="btn-Close" id="btn-Close1"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <img class="img_daily" id="img_daily0" alt="loading img" src="#">
+                            <div class="btn_verMas">Ver más...</div>
+                        </div>
+                        <div class="imgFrame">
+                            <div class="imgframeTitle">
+                                <p class="title">#Titulo 3</p>
+                                <button class="btn-Close" id="btn-Close2"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <img class="img_daily" id="img_daily11" alt="loading img" src="#">
+                            <div class="btn_verMas">Ver más...</div>
+                        </div>
+                        <div class="imgFrame">
+                            <div class="imgframeTitle">
+                                <p class="title">#Titulo 4</p>
+                                <button class="btn-Close" id="btn-Close3"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <img class="img_daily" id="img_daily2" alt="loading img" src="#">
+                            <div class="btn_verMas">Ver más...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending">
+                    <div class="trending_title">Tendencias:</div>
+                    <div class="imgTrending" id="imgTrending">
+                        <div class="frmImgsTrending" id="frmImgsTrending">
+                            <img class="img_trending" id="img_trending1" alt="loading img" src="#">
+                            <div class="frmTrendingTitle" id="frmTrendingTitle1">
+                                <p class="trendingTitle" id="trendingTitle01">#Titulo 1</p>
+                            </div>
+                        </div>
+                        <div class="frmImgsTrending" id="frmImgsTrending1">
+                            <img class="img_trending" id="img_trending2" alt="loading img" src="#">
+                            <div class="frmTrendingTitle" id="frmTrendingTitle2">
+                                <p class="trendingTitle" id="trendingTitle02">#Titulo 2</p>
+                            </div>
+                        </div>
+                        <div class="frmImgsTrending" id="frmImgsTrending2">
+                            <img class="img_trending" id="img_trending3" alt="loading img" src="#">
+                            <div class="frmTrendingTitle">
+                                <p class="trendingTitle" id="trendingTitle2">#Titulo 3</p>
+                            </div>
+                        </div>
+                        <div class="frmImgsTrending" id="frmImgsTrending3">
+                            <img class="img_trending" id="img_trending4" alt="loading img" src="#">
+                            <div class="frmTrendingTitle">
+                                <p class="trendingTitle" id="trendingTitle3">#Titulo 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySearchs">
+                    <div class="listSearchs" id="listSearchs">Tu Búsqueda:</div>
+                    <div class="img_mySearchs" id="img_mySearchs">
+                        <div class="imgFrameSearch">
+                            <div class="imgFrameSearchTitle">
+                                <p class="titleSearchs">#Titulo 1</p>
+                            </div>
+                            <img class="imgSearchs" id="imgSearchs" alt="loading img" src="#">
+                        </div>
+                        <div class="imgFrameSearch">
+                            <div class="imgFrameSearchTitle">
+                                <p class="titleSearchs">#Titulo 2</p>
+                            </div>
+                            <img class="imgSearchs" id="imgSearchs2" alt="loading img" src="#">
+                        </div>
+                        <div class="imgFrameSearch">
+                            <div class="imgFrameSearchTitle">
+                                <p class="titleSearchs">#Titulo 3</p>
+                            </div>
+                            <img class="imgSearchs" id="imgSearchs3" alt="loading img" src="#">
+                        </div>
+                        <div class="imgFrameSearch">
+                            <div class="imgFrameSearchTitle">
+                                <p class="titleSearchs">#Titulo 4</p>
+                            </div>
+                            <img class="imgSearchs" id="imgSearchs4" alt="loading img" src="#">
+                        </div>
+                    </div>
+                </div>
+                <div class="myGuifos">
+                    <div class="myGuifosTitle" id="myGuifosTitle">Mis Guifos:</div>
+                    <div class="myGuifosFrame" id="myGuifosFrame">
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs00" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs01" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs02" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs03" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs04" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs05" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs06" alt="loading img" src="#">
+                        </div>
+                        <div class="gifs">
+                            <img class="imgMyGuifos" id="imgSearchs07" alt="loading img" src="#">
+                        </div>
 
-<body>
-    <div class="container">
-        <div class="sub_container">
-            <div class="box_title"></div>
-            <div class="header">
-                <img src="assets/gifOF_logo.png" alt="" class="logo">
-                <div class="btn_createGifo"></div>
-                <div class="chooseThem"></div>
-                <div class="myGifos"></div>
+                    </div>
+                </div>
             </div>
-            <div class="search">
-                <div class="search_title"></div>
-                <div class="btn_search"></div>
-            </div>
-            <div class="trending">
-                <div class="search_trending"></div>
-                <div class="img_trending"></div>
-            </div>
-            <div class="body"></div>
         </div>
-        <div>
-</body>
-
+        <script src="./js/script.js"></script>
+    </body>
 </html>

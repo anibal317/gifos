@@ -1,0 +1,1051 @@
+@import url("https://fonts.googleapis.com/css?family=Chakra+Petch:400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Variables*/
+/*General Styles*/
+* {
+  margin-left: 0px;
+  margin-top: 0px;
+  padding: 0;
+  border: 0;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Chakra Petch";
+}
+
+body {
+  background-color: #FFF4FD;
+}
+
+.container {
+  width: 100.6%;
+  height: auto;
+}
+
+.container .box_title {
+  width: 100%;
+  height: 23px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  -webkit-box-shadow: 0 1px 0 0 #110038;
+          box-shadow: 0 1px 0 0 #110038;
+  display: table;
+  padding-left: 0.5%;
+}
+
+.container .box_title p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.container .sub_container {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.container .sub_container .header {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sub_container .header .btn_headers {
+  position: absolute;
+  margin-top: 2.7%;
+  left: 700px;
+}
+
+.container .sub_container .header .btn_headers .btn_createGifo, .container .sub_container .header .btn_headers .btn_chooseThem, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .btn_downArrow, .container .sub_container .header .btn_headers .btn_misGifos, .container .sub_container .header .btn_headers .dropdown-content {
+  background-color: #F7C9F3;
+  display: left;
+  color: black;
+  border: 1px solid #110038;
+  height: 36px;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.container .sub_container .header .btn_headers .btn_createGifo:hover {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .header .btn_headers .dropdown {
+  position: absolute;
+  left: 260px;
+  width: 165px;
+  z-index: 300;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_chooseThem {
+  position: absolute;
+  width: 131px;
+  right: 34px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_chooseThem:hover {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_downArrow {
+  width: 36px;
+  position: absolute;
+  left: 130px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .btn_downArrow:hover, .container .sub_container .header .btn_headers .dropdown .btn_chooseThem:hover {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content {
+  margin-top: 35px;
+  background-color: #E6E6E6;
+  display: none;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+  height: 102px;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .linkThem {
+  height: 36px;
+  letter-spacing: 0;
+  line-height: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid red;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content #themDay, .container .sub_container .header .btn_headers .dropdown .dropdown-content #themNight {
+  color: #110038;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .dayBox {
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .dayBox:hover {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .nightBox:hover {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .header .btn_headers .dropdown .dropdown-content .nightBox {
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .header .btn_headers .btn_createGifo {
+  position: absolute;
+  width: 144px;
+  left: 100px;
+}
+
+.container .sub_container .header .btn_headers .btn_misGifos {
+  position: absolute;
+  background-color: transparent;
+  margin-top: 3.2%;
+  left: 435px;
+  border: none;
+  width: 95px;
+}
+
+.container .sub_container .header .btn_headers .btn_misGifos:hover {
+  border: 1px solid #110038;
+}
+
+.container .sub_container .header .btn_headers .myGifOsSpan {
+  text-decoration: underline;
+  color: black;
+}
+
+.container .sub_container .header .frameLogo {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 2.1%;
+  margin-right: 47.6%;
+}
+
+.container .sub_container .header .frameLogo .logo {
+  width: 102.6px;
+  height: 64px;
+  content: url("/assets/gifOF_logo.png");
+}
+
+.container .sub_container .header .frameLogo .logo_arrow::before {
+  content: url("/assets/arrow.svg");
+  position: absolute;
+  font-size: 30px;
+  top: 50px;
+  left: -26px;
+}
+
+.container .sub_container .searchs {
+  position: relative;
+  width: auto;
+  height: 99px;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  margin-bottom: 9.3%;
+}
+
+.container .sub_container .searchs .search_title {
+  position: absolute;
+  margin-left: 0.2%;
+  margin-top: 0.2%;
+  width: 99.6%;
+  height: 24px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 0.4%;
+  padding-top: 0.2%;
+}
+
+.container .sub_container .searchs .search {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 57px;
+  height: 23px;
+}
+
+.container .sub_container .searchs .search .txtSearch {
+  position: absolute;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  width: 1075px;
+  height: 48px;
+  color: black;
+  margin-top: 3.1%;
+  padding-left: 1.1%;
+  margin-left: 1%;
+  z-index: 100;
+}
+
+.container .sub_container .searchs .search .btn_search {
+  position: absolute;
+  width: 102px;
+  height: 36px;
+  right: 1.3%;
+  margin-top: 3.7%;
+  background: #E6E6E6;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #B4B4B4;
+  letter-spacing: 0;
+  line-height: 18px;
+  z-index: 100;
+}
+
+.container .sub_container .searchs .search .btn_search .search-icon {
+  margin-right: 5.7%;
+  color: #B4B4B4;
+}
+
+.container .sub_container .searchs .suggestedList {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  display: none;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content {
+  margin-top: 75px;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0;
+  height: auto;
+  padding-bottom: 0.1%;
+  padding-top: 0.01%;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content .suggestedItem {
+  width: 1075px;
+  letter-spacing: 0;
+  line-height: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+  padding: 5px;
+  background: #FFF4FD;
+  border: 1px solid #CCA6C9;
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .searchs .suggestedList .suggestedList-content .lnk {
+  color: #110038;
+}
+
+.container .sub_container .searchs .lstSuggested {
+  margin-top: 6.3%;
+  width: 100%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sub_container .searchs .lstSuggested .lnkSuggested {
+  margin-top: 1%;
+  height: 34px;
+  padding-top: 0.27%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .suggestions .daily_suggest {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
+}
+
+.container .sub_container .suggestions .img_suggest {
+  width: 100%;
+  height: 310px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  margin-bottom: 3.9%;
+  grid-auto-rows: minmax(100px, 10px);
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  letter-spacing: 0;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .img_daily {
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .img_daily1 {
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .btn_verMas {
+  position: absolute;
+  padding-top: 5px;
+  width: 81px;
+  height: 34px;
+  margin-top: -59px;
+  margin-left: 7px;
+  background: #4180F6;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle {
+  position: relative;
+  height: 24px;
+  width: auto;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle .title {
+  vertical-align: middle;
+  position: absolute;
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0.4%;
+  margin-left: 1.0%;
+}
+
+.container .sub_container .suggestions .img_suggest .imgFrame .imgframeTitle .btn-Close {
+  margin-top: 1.1%;
+  width: 16px;
+  height: 14px;
+  position: absolute;
+  right: 1px;
+  background-color: transparent;
+}
+
+.container .sub_container .trending {
+  width: 100%;
+  height: auto;
+}
+
+.container .sub_container .trending .trending_title {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
+}
+
+.container .sub_container .trending .imgTrending {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  grid-row-gap: 16px;
+  margin-bottom: 3.9%;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  letter-spacing: 0;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle {
+  height: 24px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  margin-top: -27px;
+  position: -webkit-sticky;
+  position: sticky;
+  display: none;
+}
+
+.container .sub_container .trending .imgTrending .frmImgsTrending .frmTrendingTitle .trendingTitle {
+  vertical-align: middle;
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 1.0%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.container .sub_container .trending .imgTrending .img_trending {
+  width: 100px;
+  height: 100px;
+  display: table-column;
+  background-color: black;
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  margin: 1.3% auto;
+}
+
+.container .sub_container .trending .imgTrending .img_trending1 {
+  width: 280px;
+  height: 280px;
+  display: table-column;
+  background-color: black;
+  margin: 1.3% auto;
+}
+
+.container .sub_container .mySearchs .listSearchs {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
+}
+
+.container .sub_container .mySearchs .img_mySearchs {
+  width: 100%;
+  height: 310px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  margin-bottom: 3.9%;
+  grid-row-gap: 30px;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  letter-spacing: 0;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgFrameSearchTitle {
+  position: relative;
+  height: 24px;
+  width: auto;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgFrameSearchTitle .titleSearchs {
+  vertical-align: middle;
+  position: absolute;
+  color: #FFFFFF;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0.4%;
+  margin-left: 1.0%;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgSearchs {
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .mySearchs .img_mySearchs .imgFrameSearch .imgSearchs1 {
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .myGuifos .myGuifosTitle {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding-left: 0.5%;
+  padding-top: 0.4%;
+  margin-bottom: 1.1%;
+}
+
+.container .sub_container .myGuifos .myGuifosFrame {
+  width: 100%;
+  height: 310px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  margin-bottom: 3.9%;
+  grid-row-gap: 10px;
+}
+
+.container .sub_container .myGuifos .myGuifosFrame .gifs {
+  width: 280px;
+  height: 180px;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  letter-spacing: 0;
+}
+
+.container .sub_container .myGuifos .myGuifosFrame .gifs .imgMyGuifos {
+  content: url("/assets/SelfishFastBoutu-size_restricted.gif");
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .myGuifos .myGuifosFrame .gifs .imgMyGuifos1 {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: table-row;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1, .container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5, .container .sub_container .crearMyGuifos .frmPag6, .container .sub_container .crearMyGuifos .frmPag7 {
+  margin: 0 auto;
+  width: 684px;
+  height: 386px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .pagTitle, .container .sub_container .crearMyGuifos .frmPag2 .pagTitle, .container .sub_container .crearMyGuifos .frmPag3 .pagTitle, .container .sub_container .crearMyGuifos .frmPag4 .pagTitle, .container .sub_container .crearMyGuifos .frmPag5 .pagTitle, .container .sub_container .crearMyGuifos .frmPag6 .pagTitle, .container .sub_container .crearMyGuifos .frmPag7 .pagTitle {
+  padding-left: 7px;
+  font-family: "Chakra Petch";
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, right top, left top, from(#F7C9F3), to(#4180F6));
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag2 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag3 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag4 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag5 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag6 .pagTitle .btnClose, .container .sub_container .crearMyGuifos .frmPag7 .pagTitle .btnClose {
+  top: 125px;
+  left: 1080px;
+  position: absolute;
+  background-color: transparent;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line2, .container .sub_container .crearMyGuifos .frmPag2 .line2, .container .sub_container .crearMyGuifos .frmPag3 .line2, .container .sub_container .crearMyGuifos .frmPag4 .line2, .container .sub_container .crearMyGuifos .frmPag5 .line2, .container .sub_container .crearMyGuifos .frmPag6 .line2, .container .sub_container .crearMyGuifos .frmPag7 .line2 {
+  position: absolute;
+  top: 230px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line3, .container .sub_container .crearMyGuifos .frmPag2 .line3, .container .sub_container .crearMyGuifos .frmPag3 .line3, .container .sub_container .crearMyGuifos .frmPag4 .line3, .container .sub_container .crearMyGuifos .frmPag5 .line3, .container .sub_container .crearMyGuifos .frmPag6 .line3, .container .sub_container .crearMyGuifos .frmPag7 .line3 {
+  position: absolute;
+  top: 260px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line4, .container .sub_container .crearMyGuifos .frmPag2 .line4, .container .sub_container .crearMyGuifos .frmPag3 .line4, .container .sub_container .crearMyGuifos .frmPag4 .line4, .container .sub_container .crearMyGuifos .frmPag5 .line4, .container .sub_container .crearMyGuifos .frmPag6 .line4, .container .sub_container .crearMyGuifos .frmPag7 .line4 {
+  position: absolute;
+  font-size: 14px;
+  top: 290px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line5, .container .sub_container .crearMyGuifos .frmPag2 .line5, .container .sub_container .crearMyGuifos .frmPag3 .line5, .container .sub_container .crearMyGuifos .frmPag4 .line5, .container .sub_container .crearMyGuifos .frmPag5 .line5, .container .sub_container .crearMyGuifos .frmPag6 .line5, .container .sub_container .crearMyGuifos .frmPag7 .line5 {
+  position: absolute;
+  top: 320px;
+  font-size: 14px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .line6, .container .sub_container .crearMyGuifos .frmPag2 .line6, .container .sub_container .crearMyGuifos .frmPag3 .line6, .container .sub_container .crearMyGuifos .frmPag4 .line6, .container .sub_container .crearMyGuifos .frmPag5 .line6, .container .sub_container .crearMyGuifos .frmPag6 .line6, .container .sub_container .crearMyGuifos .frmPag7 .line6 {
+  position: absolute;
+  font-size: 14px;
+  top: 350px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .imgPage, .container .sub_container .crearMyGuifos .frmPag2 .imgPage, .container .sub_container .crearMyGuifos .frmPag3 .imgPage, .container .sub_container .crearMyGuifos .frmPag4 .imgPage, .container .sub_container .crearMyGuifos .frmPag5 .imgPage, .container .sub_container .crearMyGuifos .frmPag6 .imgPage, .container .sub_container .crearMyGuifos .frmPag7 .imgPage {
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 25px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1, .container .sub_container .crearMyGuifos .frmPag2 .step1, .container .sub_container .crearMyGuifos .frmPag3 .step1, .container .sub_container .crearMyGuifos .frmPag4 .step1, .container .sub_container .crearMyGuifos .frmPag5 .step1, .container .sub_container .crearMyGuifos .frmPag6 .step1, .container .sub_container .crearMyGuifos .frmPag7 .step1 {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 73px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .stepText, .container .sub_container .crearMyGuifos .frmPag2 .stepText, .container .sub_container .crearMyGuifos .frmPag3 .stepText, .container .sub_container .crearMyGuifos .frmPag4 .stepText, .container .sub_container .crearMyGuifos .frmPag5 .stepText, .container .sub_container .crearMyGuifos .frmPag6 .stepText, .container .sub_container .crearMyGuifos .frmPag7 .stepText {
+  margin-top: 25px;
+  margin-left: 73px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag2 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag3 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag4 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag5 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag6 .step1Buttons, .container .sub_container .crearMyGuifos .frmPag7 .step1Buttons {
+  margin-top: 90px;
+  margin-left: 330px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag2 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag3 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag4 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag5 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag6 .step1Buttons .comenzar, .container .sub_container .crearMyGuifos .frmPag7 .step1Buttons .comenzar {
+  text-align: center;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .frmPag1 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag2 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag3 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag4 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag5 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag6 .step1Buttons .cancelar, .container .sub_container .crearMyGuifos .frmPag7 .step1Buttons .cancelar {
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .btnBox {
+  cursor: pointer;
+  margin-top: 100px;
+  margin-left: 15px;
+  width: 144px;
+  height: 36px;
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .textcolor {
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 18px;
+}
+
+.container .sub_container .crearMyGuifos .camera {
+  margin-top: 11px;
+  margin-left: 11px;
+  width: 832px;
+  height: 434px;
+  background-color: #997D97;
+}
+
+.container .sub_container .crearMyGuifos .camera .vCamera {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2, .container .sub_container .crearMyGuifos .frmPag3, .container .sub_container .crearMyGuifos .frmPag4, .container .sub_container .crearMyGuifos .frmPag5 {
+  width: 860px;
+  height: 548px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag3 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag4 .step2Buttons, .container .sub_container .crearMyGuifos .frmPag5 .step2Buttons {
+  margin-top: -80px;
+  margin-left: 650px;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons .iconCamera, .container .sub_container .crearMyGuifos .frmPag3 .step2Buttons .iconCamera, .container .sub_container .crearMyGuifos .frmPag4 .step2Buttons .iconCamera, .container .sub_container .crearMyGuifos .frmPag5 .step2Buttons .iconCamera {
+  position: absolute;
+  margin-left: 15px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  cursor: pointer;
+}
+
+.container .sub_container .crearMyGuifos .frmPag2 .step2Buttons .capturar, .container .sub_container .crearMyGuifos .frmPag3 .step2Buttons .capturar, .container .sub_container .crearMyGuifos .frmPag4 .step2Buttons .capturar, .container .sub_container .crearMyGuifos .frmPag5 .step2Buttons .capturar {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 50px;
+  width: 144px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .listo, .container .sub_container .crearMyGuifos .recording {
+  position: absolute;
+  top: 510px;
+  left: 930px;
+  color: white;
+  background: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .timer {
+  cursor: default;
+  position: absolute;
+  top: 510px;
+  left: 930px;
+  color: white;
+  background: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .recording {
+  left: 895px;
+  width: 36px;
+  height: 36px;
+}
+
+.container .sub_container .crearMyGuifos .timer {
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  left: 240px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  width: 124px;
+  height: 36px;
+}
+
+.container .sub_container .crearMyGuifos .subirGuifo {
+  position: absolute;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 700px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.container .sub_container .crearMyGuifos .repetirCaptura {
+  position: absolute;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 540px;
+}
+
+.container .sub_container .crearMyGuifos .progess {
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 220px;
+  width: 240px;
+  height: 24px;
+}
+
+.container .sub_container .crearMyGuifos .play {
+  text-align: center;
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 193px;
+  width: 24px;
+  height: 24px;
+}
+
+.container .sub_container .crearMyGuifos .cancelarSubida {
+  position: absolute;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 700px;
+}
+
+.container .sub_container .crearMyGuifos .preView {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+
+.container .sub_container .crearMyGuifos .imgLoading {
+  position: absolute;
+  margin-top: 174px;
+  margin-left: 406px;
+}
+
+.container .sub_container .crearMyGuifos .loadingGif {
+  position: absolute;
+  margin-top: 291px;
+  margin-left: 265px;
+  width: 324px;
+  height: 24px;
+}
+
+.container .sub_container .crearMyGuifos .step5SubTitle {
+  position: absolute;
+  margin-top: 323px;
+  margin-left: 310.5px;
+  font-size: 12px;
+}
+
+.container .sub_container .crearMyGuifos .step5Title, .container .sub_container .crearMyGuifos .step6Title {
+  position: absolute;
+  margin-top: 230px;
+  margin-left: 322px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container .sub_container .crearMyGuifos .step6buttons .bntCopyLink {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 419px;
+  text-align: center;
+  z-index: 1000;
+  width: 256px;
+}
+
+.container .sub_container .crearMyGuifos .step6buttons .ready {
+  margin-top: 180px;
+  margin-left: 480px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .step6buttons .btnDownloadGif {
+  width: 256px;
+  margin-top: 100px;
+  margin-left: 419px;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .tags {
+  position: absolute;
+  width: 500px;
+  height: 24px;
+  top: 620px;
+  left: 300px;
+  color: black;
+}
+
+.container .sub_container .crearMyGuifos .txtTags {
+  position: absolute;
+  width: 200px;
+  height: 26px;
+  top: 615px;
+  left: 680px;
+  z-index: 200;
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  padding-left: 2px;
+}
+
+.container .sub_container .crearMyGuifos .step6Title {
+  margin-top: 49px;
+  margin-left: 419px;
+  text-align: center;
+}
+
+.container .sub_container .crearMyGuifos .txtfinalUrl {
+  top: 195px;
+  background-color: white;
+  width: 355px;
+  left: 0px;
+  color: black;
+  padding-left: 2px;
+}
+
+.container .sub_container .crearMyGuifos .message {
+  position: absolute;
+  color: black;
+  top: 335px;
+  left: 751px;
+  width: 255px;
+  height: 26px;
+  padding-left: 2px;
+}
+
+.container .sub_container .crearMyGuifos .finalGif {
+  width: 350px;
+  height: 184px;
+  left: 2px;
+  top: 2px;
+  background-color: red;
+  z-index: 100;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.container .sub_container .crearMyGuifos .gifoView {
+  width: 356px;
+  height: 191px;
+  margin-top: 29px;
+  margin-left: 24px;
+  position: absolute;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+}
+
+.container .sub_container .margintop {
+  margin-top: 80px;
+}
+/*# sourceMappingURL=dayStyle.css.map */

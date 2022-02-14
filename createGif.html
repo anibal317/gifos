@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/dayStyle.css" id="lnkStyleSheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>¡Bienvenidos/as a Guifos.com!</title>
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="box_title">
+                <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+            <div class="sub_container">
+                <div class="nav">
+                    <nav class="header">
+                        <div class="frameLogo">
+                            <a href="index.html" class="logo_arrow"><img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.os"></a>
+                        </div>
+                        <div class="btn_headers">
+                            <button class="btn_createGifo">Crear Guifos</button>
+                            <div class="dropdown">
+                                <button class="btn_pos btn_chooseThem" id="btn_chooseThem">Elegir tema</button>
+                                <button class="btn_pos btn_downArrow" id="btn_downArrow"><img src="./assets/dropdown.svg" alt="dropdown arrow"></button>
+                                <div class="dropdown-content" id="dropdown-content">
+                                    <div class="linkThem dayBox" id="dayBox"><a href="#" id="themDay">Saylor Day</a></div>
+                                    <div class="linkThem nightBox" id="nightBox"><a href="#" id="themNight">Saylor Night</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn_misGifos" id="btn_misGifos"> <span class="myGifOsSpan">M</span>is
+                                Guifos</button>
+                        </div>
+                    </nav>
+                    <div class="crearMyGuifos">
+                        <div class="frmPag1">
+                            <div class="pagTitle">Crear Gifos</div>
+                            <div class="imgPage"><img src="./assets/window_img.png" alt=""></div>
+                            <div class="step1 textcolor">Aquí podrás crear tus propios guifos</div>
+                            <div class="step1Description textcolor">
+                                <div class="stepText line1 textcolor">
+                                    Crear tu <strong style="color: black; font-size: 14px;">guifo</strong> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:
+                                </div>
+                                <div class="stepText line2 textcolor">
+                                    <strong style="color: black;">1)</strong> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)
+                                </div>
+                                <div class="stepText line3 textcolor">
+                                    <strong style="color: black;">2)</strong> Capturar tu momento guifo
+                                </div>
+                                <div class="stepText line4 textcolor">
+                                    <strong style="color: black;">3)</strong> Revisar el momento
+                                </div>
+                                <div class="stepText line5 textcolor">
+                                    <strong style="color: black;">4)</strong> Listo para subir y compartir!
+                                </div>
+                                <div class="stepText line6 textcolor">
+                                    ¿Quieres comenzar a crear tu <strong style="color: black; font-size: 14px;">guifo</strong> ahora?
+                                </div>
+                            </div>
+                            <div class="step1Buttons textcolor">
+                                <button class="btnBox cancelar textcolor" id="btnCancelar"  onclick="window.location.href='index.html'">Cancelar</button>
+                                <button class="btnBox comenzar textcolor" id="btnComenzar">Comenzar</button>
+                            </div>
+                        </div>
+                        <div class="frmPag2">
+                            <div class="pagTitle">
+                                <p>Un Chequeo Antes de Empezar</p>
+                                <button class="btnClose" id="btnClose0"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <div class="camera">
+                                <video src="#" class="vCamera" autoplay id="vCamera"></video>
+                            </div>
+                            <div class="step2Buttons textcolor">
+                                <button class="btnBox textcolor iconCamera" id="btnIconCamera"><img src="./assets/camera.svg" alt=""></button>
+                                <button class="btnBox textcolor capturar" id="btnCapturar">Capturar</button>
+                            </div>
+                        </div>
+                        <div class="frmPag3">
+                            <div class="pagTitle">
+                                <p>Capturando Tu Guifo</p>
+                                <button class="btnClose" id="btnClose"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <div class="camera">
+                                <video src="#" class="vCamera" id="vCamera1" autoplay></video>
+                            </div>
+                            <div class="step3Buttons textcolor">
+                                <button class="btnBox textcolor recording" id="btnRecording"><img src="./assets/recording.svg" alt=""></button>
+                                <button class="btnBox textcolor listo" id="btnListo">Listo</button>
+                            </div>
+                        </div>
+                        <button class="btnBox timer">00:00:00:00</button>
+                        <div class="frmPag4">
+                            <div class="pagTitle">
+                                <p>Vista Previa</p>
+                                <button class="btnClose" id="btnClose1"><img src="./assets/close.svg" alt=""></button>
+                            </div>
+                            <div class="camera">
+                                <img src="#" class="preView" id="preView" alt="preview">
+                            </div>
+                            <div class="step4uttons textcolor">
+                                <progress class="progess" max="10" value="5"></progress>
+                                <button class="btnBox textcolor play" id="btnPlay"><img src="assets/forward.svg" alt=""></button>
+                                <button class="btnBox textcolor repetirCaptura" id="btnRepetir">Repetir Captura</button>
+                                <button class="btnBox textcolor subirGuifo" id="btnSubirGuifo">Subir Guifo</button>
+                            </div>
+                        </div>
+                        <div class="frmPag5">
+                            <div class="pagTitle">Subiendo Guifo</div>
+                            <img src="./assets/globe_img.png" class="imgLoading" alt="">
+                            <div class="textcolor step5Title" style="font-size: 16px; font-weight: bold;">Estamos subiendo tu guifo…</div>
+                            <progress class="loadingGif"></progress>
+                            <div class="textcolor step5SubTitle" id="span">Tiempo restante: <span style="color: rgba(17,0,56,0.64); text-decoration: line-through;" >38 años</span> algunos minutos</div>
+                            <!-- <div class="textcolor step5SubTitle reminderTimer" id="reminderTime">Last time: </div> -->
+                            <div class="camera"></div>
+                            <div class="step5buttons textcolor">
+                                <div class="tags" id="tags">Agregar los tags de búsqueda seoarados por coma: </div><input class="txtTags" id="txtTags" type="text"> 
+                                <button class="btnBox textcolor cancelarSubida" id="btnCancelarSubida">Cancelar</button>
+                            </div>
+                        </div>
+                        <div class="frmPag6">
+                            <div class="pagTitle">Guifo Subido Con Éxito</div>
+                            <div class="textcolor step6Title">Guifo creado con éxito</div>
+                            <div class="gifoView">
+                                <img src="#" alt="" class="finalGif" id="finalGif">
+                                <input type="text" name="txtfinalUrl" id="txtfinalUrl" class="txtTags txtfinalUrl" readonly value="">
+                            </div>
+                            <div class="step6buttons textcolor">
+                                <button class="btnBox textcolor bntCopyLink" id="bntCopyLink">Copiar Enlace Guifo</button>
+                                <button class="btnBox textcolor btnDownloadGif" id="btnDownloadGif">Descargar Guifo</button>
+                                <div class="message" id="message"></div>
+                                <button class="btnBox textcolor ready" id="btnReady">Listo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myGuifos margintop">
+                        <div class="myGuifosTitle" id="myGuifosTitle">Mis Guifos:</div>
+                        <div class="myGuifosFrame" id="myGuifosFrame">
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs01" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-1" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-2" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-3" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-4" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-5" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-6" alt="loading img" src="#">
+                            </div>
+                            <div class="gifs">
+                                <img class="imgMyGuifos" id="imgSearchs-7" alt="loading img" src="#">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>           
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"></script> 
+        <script src="./js/createGif.js"></script>
+    </body>
+</html>
